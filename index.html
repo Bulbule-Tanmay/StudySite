@@ -606,19 +606,51 @@ function renderFavorites(){
 /* ===================================================================
    PDF VIEWER
    =================================================================== */
+function pdfPathCandidates(code, filename){
+  const subject = TREE.Files?.[code] || {};
+  const candidates = [];
+
+  for (const [groupKey, files] of Object.entries(subject)) {
+    if (!files.includes(filename)) continue;
+    if (groupKey.toLowerCase().includes('root_files')) {
+      candidates.push(`Files/${code}/${filename}`);
+    } else {
+      candidates.push(`Files/${code}/${groupKey}/${filename}`);
+    }
+  }
+
+  candidates.push(`Files/${code}/${filename}`);
+  return [...new Set(candidates)];
+}
+
 function pdfPathFor(code, filename){
-  // All PDFs live flat inside the "Files" folder next to index.html.
-  return `Files/${filename}`;
+  return pdfPathCandidates(code, filename)[0];
+}
+
+async function resolvePdfPath(code, filename){
+  const candidates = pdfPathCandidates(code, filename);
+  for (const rawPath of candidates) {
+    const path = encodeURI(rawPath);
+    try {
+      const response = await fetch(path, { method: 'HEAD' });
+      if (response.ok) return path;
+    } catch (error) {
+      // Try the next candidate.
+    }
+  }
+  return encodeURI(candidates[0]);
 }
 function openPdf(code, filename){
-  const rawPath = pdfPathFor(code, filename);
-  const path = encodeURI(rawPath);
-  // Open the file in a new browser tab/window instead of embedding inline.
-  const w = window.open(path, '_blank');
-  if (!w) {
-    // If popup blocked, navigate in the same tab as a fallback.
-    window.location.href = path;
-  }
+  const popup = window.open('about:blank', '_blank');
+  resolvePdfPath(code, filename).then(path=>{
+    // Open the file in a new browser tab/window instead of embedding inline.
+    if (popup) {
+      popup.location.href = path;
+    } else {
+      // If popup blocked, navigate in the same tab as a fallback.
+      window.location.href = path;
+    }
+  });
 }
 function embedPdf(path){
   document.getElementById('pdf-body').innerHTML =
