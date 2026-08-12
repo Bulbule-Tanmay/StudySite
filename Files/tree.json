@@ -1,0 +1,311 @@
+{
+  "Files": {
+    "AIKRR": {
+      "AIKRR_UNIT_1": [
+        "UNIT-1.pdf",
+        "Unit I.pdf"
+      ],
+      "AIKRR_UNIT_2": [
+        "Unit II Tabu Search AIKRR.pdf",
+        "Unit II AIKRR.pdf"
+      ],
+      "AIKRR_UNIT_3": [
+        "Unit III Finding Optimal Paths.pdf"
+      ],
+      "AIKRR_UNIT_4": [
+        "Unit IV-Array.pdf",
+        "Unit IV- Pointer.pdf",
+        "Unit IV Logic and Inferences.pdf"
+      ],
+      "AIKRR_PYQS": [
+        "AIKRR QB CAE 1.pdf",
+        "AIKRR QB CAE 2.pdf",
+        "AIKRR QB CAE 3.pdf"
+      ]
+    },
+    "BCC": {
+      "BCC_UNIT_I": [
+        "bcc -ch.1 Sakshi w.pdf"
+      ],
+      "BCC_UNIT_2": [
+        "bcc -2,3,4 Sakshi.pdf"
+      ],
+      "BCC_UNIT_3": [
+        "bcc -2,3,4 Sakshi.pdf"
+      ],
+      "BCC_UNIT_4": [
+        "bcc -2,3,4 Sakshi.pdf"
+      ],
+      "BCC_UNIT_5": [
+        "bcc -2,3,4 Sakshi.pdf"
+      ],
+      "root_files": [
+        "bcc -ch.1 Sakshi w.pdf"
+      ]
+    },
+    "CAO": {
+      "CAo_unit_1": [
+        "CAO Unit 1.pdf"
+      ],
+      "CAo_unit_2": [
+        "CAO Unit-3.pdf"
+      ],
+      "CAo_unit_3": [
+        "CAO Unit-3.pdf"
+      ],
+      "CAo_unit_4": [
+        "CAO Unit-4 (1).pdf"
+      ],
+      "CAo_unit_5": [
+        "CAO Unit 5  Notes.pdf"
+      ],
+      "CAO_PYQS": [
+        "CAO QB CAE 1.pdf",
+        "CAO QB CAE 2.pdf",
+        "CAO QB CAE 2 Another.pdf",
+        "CAO QB CAE 3.pdf"
+      ]
+    },
+    "CN": {
+      "CN_unit_1": [
+        "CN -1,2 Sakshi.pdf",
+        "Unit I Introduction to Computer Networks.pdf",
+        "Unit I_Question Answers.docx.pdf"
+      ],
+      "CN_unit_2": [
+        "CN -1,2 Sakshi.pdf",
+        "Unit II Physical and Data Link Layer.pdf"
+      ],
+      "CN_unit_3": [
+        "CN -3,4 Sakshi.pdf"
+      ],
+      "CN_unit_4": [
+        "CN -3,4 Sakshi.pdf"
+      ],
+      "CN_unit_5": [
+        "CN 5 Sakshi.pdf"
+      ],
+      "CN_PYQS": [
+        "QB_CN_CAE 1.docx.pdf"
+      ]
+    },
+    "DBMS": {
+      "DBMS_UNIT_All": [
+        "DBMS SAKSHI .pdf"
+      ],
+      "DBMS_PYQ": [
+        "SY DS DBMS Question Bank_SBV.docx.pdf",
+        "SY DS Unit 3 4 DBMS Question Bank_SBV.docx.pdf"
+      ]
+    },
+    "DMGT": {
+      "DMGT_UNIT_I": [
+        "DMGT unit 1 notes Shri.pdf",
+        "dmgt 1.pdf"
+      ],
+      "DMGT_UNIT_II": [
+        "DMGT unit 2 and 3.pdf",
+        "DMGT unit 2,3 notes Shri.pdf",
+        "dmgt 2.pdf"
+      ],
+      "DMGT_UNIT_III": [
+        "DMGT unit 2 and 3.pdf",
+        "DMGT unit 2 and 3 (1).pdf",
+        "dmgt 3.pdf"
+      ],
+      "DMGT_UNIT_IV": [
+        "DMGT3,4.pdf",
+        "DMGT Unit 3_4 notes Shri.pdf",
+        "dmgt 4.pdf"
+      ],
+      "DMGT PYQ": [
+        "DMGT QB CAE 1.pdf",
+        "DMGT QB CAE 2.pdf",
+        "DMGT QB CAE 3.pdf"
+      ]
+    },
+    "DSA": {
+      "DSA_UNIT_1": [
+        "Data-Structure-notes.pdf",
+        "DSA-Handwritten-Notes.pdf",
+        "DSA-Unit1.pdf",
+        "DSA_Notes.pdf",
+        "Unit 1 - Introduction to Algorithm and Data Structures.pdf",
+        "Unit 1.pdf"
+      ],
+      "DSA_UNIT_2": [
+        "DSA unit2.pdf",
+        "Unit 2.pdf",
+        "Unit 2 -  Linked List- Sorting and Searching Techniques.pptx.pdf"
+      ],
+      "DSA_UNIT_3": [
+        "Binary Trees.pdf",
+        "Stack and Queue.pdf",
+        "Unit 3.pdf"
+      ],
+      "DSA_UNIT_4": [
+        "8_Trees.pdf",
+        "Binary Search tree.pdf",
+        "UNIT 4 DSA.pptx"
+      ],
+      "DSA_UNIT_5": [
+        "Unit 5 Notes.pdf",
+        "unit5.pdf"
+      ],
+      "DSA_PYQS": [
+        "DSA QB ALL Units.pdf",
+        "DSA_Q_Bank_CAE2.pdf",
+        "QB_CAE 1 DSA AY 2024-25 SEM-I.pdf"
+      ]
+    },
+    "DWM": {
+      "DWM_UNIT_1": [
+        "DWM -2 Sakshiw.pdf",
+        "DWM part-1 Sakshi.pdf"
+      ],
+      "DWM_UNIT_2": [
+        "DWM 1 Sakshi.pdf",
+        "DWM part2 Sakshiw.pdf"
+      ],
+      "DWM_UNIT_3": [
+        "DWM -2 Sakshiw.pdf"
+      ],
+      "DWM_UNIT_4": [
+        "DWM -2 Sakshiw.pdf"
+      ],
+      "DWM_UNIT_5": [
+        "DWM chapter5 Sakshi.pdf"
+      ],
+      "DWM pyqs": [
+        "DWM CAE2.docx.pdf",
+        "Elective I Data Warehousing and Mining_Question_Bank_1 (1).pdf"
+      ]
+    },
+    "FLA": {
+      "FLA_UNIT_1": [
+        "FLA part 1 Sakshi.pdf",
+        "Fla part 2 sakshi.pdf",
+        "Unit 1-Formal Language Theory and  Finite Automaton.pdf"
+      ],
+      "FLA_UNIT_2": [
+        "FLA part 1 Sakshi.pdf",
+        "Fla part 2 sakshi.pdf",
+        "UNIT2-FLA.pdf"
+      ],
+      "FLA_UNIT_3": [
+        "UNIT3-FLA.pdf",
+        "UNITIII-FLA-NOTES.pdf",
+        "Fla part 2 sakshi.pdf"
+      ],
+      "FLA_UNIT_4": [
+        "4fla (1).pdf",
+        "Fla part 2 sakshi.pdf"
+      ],
+      "FLA_UNIT_5": [
+        "DocScanner 04-May-2023 12-51 (2).pdf",
+        "Fla part 2 sakshi.pdf"
+      ],
+      "FLA _PYQS": [
+        "FLA part 1 Sakshi.pdf",
+        "FLA-QB-3.docx.pdf",
+        "SYCS_FLA-CAE2VK (1) (1).docx.pdf",
+        "SYDS_FLA_VK.docx.pdf"
+      ]
+    },
+    "MLA": {
+      "MLA_UNIT_1": [
+        "MLA -1 Sakshiw.pdf"
+      ],
+      "MLA_UNIT_2": [
+        "MLA-2 Sakshiw.pdf"
+      ],
+      "MLA_UNIT_3": [
+        "MLApart-2 Sakshiw.pdf"
+      ],
+      "MLA_UNIT_4": [
+        "MLA part -3 Sakshiw.pdf"
+      ],
+      "MLA_UNIT_5": [
+        "MLA-3 Sakshiw.pdf"
+      ],
+      "MLA_PYQS": [
+        "MLA VIVA QUESTIONS.docx",
+        "MLA Question bank.docx.pdf",
+        "MLA part-1 Sakshiw.pdf",
+        "MLA CAE3.docx.pdf",
+        "MLA CAE1.docx.pdf"
+      ]
+    },
+    "OOP(new)": {
+      "OOP-UNIT_1": [
+        "unit1_notes.pdf",
+        "Unit1_handwritten.pdf"
+      ],
+      "OOP-UNIT_2": [
+        "Unit_2_handwritten.pdf"
+      ],
+      "OOPS_PYQS": [
+        "QB Unit 1 and 2 OOP.pdf",
+        "OOP-py-cae1-2023.jpg"
+      ]
+    },
+    "OS": {
+      "OS_UNIT_1": [
+        "OS Sakshi unit(1-5).pdf"
+      ],
+      "OS_UNIT_2": [
+        "OS ALL NOTES.pdf",
+        "OS Sakshi .pdf"
+      ],
+      "OS_UNIT_3": [
+        "OS ALL NOTES.pdf",
+        "OS Sakshi .pdf"
+      ],
+      "OS_UNIT_4": [
+        "OS ALL NOTES.pdf",
+        "OS Sakshi .pdf"
+      ],
+      "OS_UNIT_5": [
+        "OS ALL NOTES.pdf",
+        "OS Sakshi .pdf",
+        "OS Unit V.pptx"
+      ],
+      "OS_PYQS": [
+        "OS QB CAE 1.pdf",
+        "OS QB CAE 1 DSY.pdf",
+        "OS QB CAE 2.pdf",
+        "OS QB CAE 3.pdf"
+      ]
+    },
+    "QC(new)": {
+      "QC_unit_1": [
+        "Unit- I - Foundations_of_Quantum_Computing.pdf"
+      ]
+    },
+    "SEPM": {
+      "SEPM_UNIT_1": [
+        "Unit I SEPM.pdf",
+        "Unit I Software Process.pdf"
+      ],
+      "SEPM_UNIT_2": [
+        "Unit II Software Requirements SEPM.pdf"
+      ],
+      "SEPM_UNIT_3": [
+        "Unit III Component Design SPEM.pdf",
+        "Unit III Design Modeling in Software Engineering SEPM.pdf",
+        "Unit III Software Design SPEM.pdf"
+      ],
+      "SEPM_UNIT_4": [
+        "Unit IV Software Testing.pdf"
+      ],
+      "SEPM_UNIT_5": [
+        "SEPM Unit 5 Notes.pdf"
+      ],
+      "SEPM_PYQS": [
+        "SEPM QB CAE 1.jpg",
+        "SEPM QB CAE 2.pdf",
+        "SEPM QB CAE 3.pdf"
+      ]
+    }
+  }
+}
