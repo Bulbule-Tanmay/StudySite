@@ -1,0 +1,24 @@
+{
+  "name": "study-site",
+  "version": "1.0.0",
+  "description": "CNI — College Notes Index for G.H. Raisoni students",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bulbule-Tanmay/StudySite.git"
+  },
+  "keywords": [
+    "college",
+    "notes",
+    "study",
+    "material"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
+}
