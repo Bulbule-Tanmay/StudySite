@@ -1,0 +1,31 @@
+{
+  "name": "cni-college-notes-index",
+  "version": "2.0.0",
+  "description": "CNI — An open-source, community-driven study dashboard for organizing and sharing subject notes, PYQs, and study material.",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build:tree": "node scripts/build-tree.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bulbule-Tanmay/StudySite.git"
+  },
+  "keywords": [
+    "college",
+    "notes",
+    "study",
+    "material",
+    "open-source",
+    "community",
+    "PYQ",
+    "question-bank"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
+}

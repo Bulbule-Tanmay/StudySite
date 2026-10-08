@@ -1,0 +1,142 @@
+[
+  {
+    "id": "ac07026b42b9",
+    "timestamp": "2026-10-08T20:28:31.688Z",
+    "action": "ADS_CONFIG_MUTATED",
+    "details": "Ad space placements updated",
+    "ip": "::1"
+  },
+  {
+    "id": "77a1a2d422f5",
+    "timestamp": "2026-10-08T20:27:26.535Z",
+    "action": "AUTH_SUCCESS",
+    "details": "Successful administrative authentication",
+    "ip": "::1"
+  },
+  {
+    "id": "5215fbf3a619",
+    "timestamp": "2026-10-08T20:26:38.564Z",
+    "action": "PIN_CHANGED",
+    "details": "Administrative password was successfully updated",
+    "ip": "::1"
+  },
+  {
+    "id": "1c170db2e552",
+    "timestamp": "2026-10-08T20:26:38.562Z",
+    "action": "AUTH_SUCCESS",
+    "details": "Successful administrative authentication",
+    "ip": "::1"
+  },
+  {
+    "id": "a36f87201055",
+    "timestamp": "2026-10-08T20:26:38.561Z",
+    "action": "PIN_CHANGED",
+    "details": "Administrative password was successfully updated",
+    "ip": "::1"
+  },
+  {
+    "id": "925079185d81",
+    "timestamp": "2026-10-08T20:26:38.557Z",
+    "action": "ADS_CONFIG_MUTATED",
+    "details": "Ad space placements updated",
+    "ip": "::1"
+  },
+  {
+    "id": "7b719b2c87ea",
+    "timestamp": "2026-10-08T20:26:38.549Z",
+    "action": "AUTH_SUCCESS",
+    "details": "Successful administrative authentication",
+    "ip": "::1"
+  },
+  {
+    "id": "f51fac5121e5",
+    "timestamp": "2026-10-08T20:17:41.191Z",
+    "action": "AUTH_SUCCESS",
+    "details": "Successful administrative authentication",
+    "ip": "::1"
+  },
+  {
+    "id": "7abb86b431e5",
+    "timestamp": "2026-10-08T20:17:26.655Z",
+    "action": "AUTH_SUCCESS",
+    "details": "Successful administrative authentication",
+    "ip": "::1"
+  },
+  {
+    "id": "23cb9f463a0e",
+    "timestamp": "2026-10-08T20:17:24.053Z",
+    "action": "AUTH_FAILURE",
+    "details": "Invalid PIN attempt (3/5)",
+    "ip": "::1"
+  },
+  {
+    "id": "d9e29ada1a0f",
+    "timestamp": "2026-10-08T20:17:22.711Z",
+    "action": "AUTH_FAILURE",
+    "details": "Invalid PIN attempt (2/5)",
+    "ip": "::1"
+  },
+  {
+    "id": "f194e0dbdf6d",
+    "timestamp": "2026-10-08T20:17:18.498Z",
+    "action": "AUTH_FAILURE",
+    "details": "Invalid PIN attempt (1/5)",
+    "ip": "::1"
+  },
+  {
+    "id": "b5470ea2372d",
+    "timestamp": "2026-10-08T20:13:03.528Z",
+    "action": "AUTH_SUCCESS",
+    "details": "Successful administrative authentication",
+    "ip": "::1"
+  },
+  {
+    "id": "907304d8b642",
+    "timestamp": "2026-10-08T20:13:02.303Z",
+    "action": "AUTH_FAILURE",
+    "details": "Invalid PIN attempt (1/5)",
+    "ip": "::1"
+  },
+  {
+    "id": "7d4dee802cc8",
+    "timestamp": "2026-10-08T20:11:49.896Z",
+    "action": "AUTH_SUCCESS",
+    "details": "Successful administrative authentication",
+    "ip": "::1"
+  },
+  {
+    "id": "d132d304672a",
+    "timestamp": "2026-10-08T20:11:44.752Z",
+    "action": "AUTH_SUCCESS",
+    "details": "Successful administrative authentication",
+    "ip": "::1"
+  },
+  {
+    "id": "ae0347564ff9",
+    "timestamp": "2026-10-08T20:11:29.906Z",
+    "action": "AUTH_SUCCESS",
+    "details": "Successful administrative authentication",
+    "ip": "::1"
+  },
+  {
+    "id": "ac6f5041b14a",
+    "timestamp": "2026-10-08T20:11:25.048Z",
+    "action": "AUTH_FAILURE",
+    "details": "Invalid PIN attempt (1/5)",
+    "ip": "::1"
+  },
+  {
+    "id": "727544733f64",
+    "timestamp": "2026-10-08T19:57:41.039Z",
+    "action": "AUTH_SUCCESS",
+    "details": "Successful administrative authentication",
+    "ip": "::1"
+  },
+  {
+    "id": "b77bedd90002",
+    "timestamp": "2026-10-08T19:57:15.558Z",
+    "action": "AUTH_FAILURE",
+    "details": "Invalid PIN attempt (1/5)",
+    "ip": "::1"
+  }
+]

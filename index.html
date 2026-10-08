@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <title>CNI — College Notes Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="A curated, quiet, and open-source college notes index and previous year question papers repository for university students.">
+  <meta name="theme-color" content="#0E0F11">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CNI — College Notes Index">
+  <meta property="og:description" content="Class notes and previous year papers, organised.">
+  <meta property="og:type" content="website">
+
+  <!-- Typography: Newsreader (Editorial Serif) + Inter (Refined UI Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ═══ App Container ═══ -->
+  <div class="site-wrap">
+
+    <!-- ═══ Slim Header (56px) ═══ -->
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+        <!-- Logo & Wordmark -->
+        <a href="#/" class="site-brand" id="brand-link" aria-label="CNI Home">
+          <span class="brand-glyph">CNI</span>
+          <span class="brand-divider">/</span>
+          <span class="brand-sub">College Notes Index</span>
+        </a>
+
+        <!-- Center Command Trigger -->
+        <div class="header-search-wrap">
+          <button class="command-trigger" id="command-search-btn" aria-label="Search notes and subjects">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <span class="search-placeholder">Search subjects, units, and PYQs…</span>
+            <kbd class="kbd-shortcut">⌘K</kbd>
+          </button>
+        </div>
+
+        <!-- Right Utility Controls -->
+        <div class="header-actions">
+          <button class="header-btn" id="filter-saved-btn" title="View Bookmarked Notes">
+            <span class="material-symbols-outlined">bookmark</span>
+            <span class="btn-label">Saved</span>
+            <span class="count-pill" id="saved-count-pill" style="display:none;">0</span>
+          </button>
+
+          <button class="header-icon-btn" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+            <span class="material-symbols-outlined theme-icon-dark">dark_mode</span>
+            <span class="material-symbols-outlined theme-icon-light">light_mode</span>
+          </button>
+
+          <a href="https://github.com/Bulbule-Tanmay/StudySite" target="_blank" rel="noopener noreferrer" class="header-btn header-btn--github" title="View source on GitHub">
+            <svg class="github-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span class="btn-label">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═══ Slot A: Quiet Top Sponsor Banner (If Active) ═══ -->
+    <div class="ad-slot-top-wrap" id="ad-slot-top" style="display:none;"></div>
+
+    <!-- ═══ Main Content Container ═══ -->
+    <main class="main-content" id="main-content">
+
+      <!-- ─── INDEX VIEW (Home) ─── -->
+      <div class="view-container" id="view-index">
+        <!-- Quiet Editorial Hero -->
+        <section class="hero-block">
+          <h1 class="hero-headline">Class notes and previous year papers, organised.</h1>
+          <p class="hero-subtext">A clean, community-curated reference index for university courses. Browse units, preview PDFs, and download source materials.</p>
+          <div class="hero-meta" id="hero-metadata-line">
+            <span class="meta-item" id="meta-subjects-count">14 subjects</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item" id="meta-units-count">78 units</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item" id="meta-files-count">180+ files</span>
+          </div>
+
+          <!-- Hero Search Input -->
+          <div class="hero-search-bar">
+            <span class="material-symbols-outlined hero-search-icon">search</span>
+            <input type="text" id="inline-search-input" class="hero-search-input" placeholder="Search subjects, units, or question banks… (Ctrl K)" autocomplete="off">
+            <button class="hero-search-clear" id="inline-search-clear" aria-label="Clear search" style="display:none;">
+              <span class="material-symbols-outlined">close</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Filter Segmented Control & View Controls -->
+        <section class="filter-strip">
+          <div class="filter-chips-scroll" id="category-filter-chips">
+            <button class="filter-chip active" data-filter="all">All</button>
+            <button class="filter-chip" data-filter="saved">Saved</button>
+            <button class="filter-chip" data-filter="pyq">Question Papers</button>
+            <button class="filter-chip" data-filter="cs-core">Core CS</button>
+            <button class="filter-chip" data-filter="ai-ds">AI &amp; Data</button>
+            <button class="filter-chip" data-filter="math-theory">Math &amp; Theory</button>
+          </div>
+
+          <div class="filter-actions">
+            <button class="action-text-btn" id="toggle-all-accordions-btn">
+              <span class="material-symbols-outlined">unfold_more</span>
+              <span id="toggle-all-label">Expand all</span>
+            </button>
+
+            <div class="sort-dropdown-wrap">
+              <label for="sort-select" class="sr-only">Sort by</label>
+              <select id="sort-select" class="sort-dropdown" aria-label="Sort subjects">
+                <option value="code-asc">Code (A–Z)</option>
+                <option value="files-desc">Most materials</option>
+                <option value="popular">Most accessed</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Subject Index Section -->
+        <section class="index-section" aria-label="Subjects Directory">
+          <div class="section-lead-row">
+            <h2 class="section-lead-title">Subject Index</h2>
+            <span class="section-lead-count" id="index-showing-count">14 subjects</span>
+          </div>
+
+          <!-- Subject Rows / Cards Grid -->
+          <div class="subject-index-grid" id="subject-index-grid">
+            <!-- Populated via app.js -->
+          </div>
+
+          <!-- Empty State -->
+          <div class="empty-state" id="index-empty-state" style="display:none;">
+            <p class="empty-title">No matching subjects or files</p>
+            <p class="empty-desc">Try searching for a different keyword or reset your filters.</p>
+            <button class="btn-quiet" id="reset-filter-btn">Reset filters</button>
+          </div>
+        </section>
+
+        <!-- Contribute on GitHub (Minimalist) -->
+        <section class="contribute-section">
+          <div class="contribute-box">
+            <div class="contribute-copy">
+              <h3 class="contribute-heading">Contribute on GitHub</h3>
+              <p class="contribute-text">CNI is community-driven. Adding new notes, solved papers, and revisions happens through simple GitHub pull requests.</p>
+              
+              <ol class="contribute-steps">
+                <li><span>1</span> Add files into <code>Files/Subject/Unit/</code></li>
+                <li><span>2</span> Run <code>npm run build:tree</code></li>
+                <li><span>3</span> Open a Pull Request on GitHub</li>
+              </ol>
+
+              <div class="contribute-cta-row">
+                <a href="https://github.com/Bulbule-Tanmay/StudySite" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <span>Contribute on GitHub</span>
+                  <span class="material-symbols-outlined">arrow_outward</span>
+                </a>
+                <a href="https://github.com/Bulbule-Tanmay/StudySite/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="link-subtle">
+                  Contribution guidelines
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ─── SUBJECT DETAIL VIEW (Clean dedicated page) ─── -->
+      <div class="view-container" id="view-detail" style="display:none;">
+        <div class="detail-header">
+          <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <a href="#/" class="breadcrumb-link" id="breadcrumb-back-link">
+              <span class="material-symbols-outlined">arrow_back</span>
+              <span>All subjects</span>
+            </a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-current" id="detail-breadcrumb-code">DSA</span>
+          </nav>
+
+          <div class="detail-title-row">
+            <div class="detail-title-block">
+              <div class="detail-badge-line">
+                <span class="detail-code-badge" id="detail-code-badge">DSA</span>
+                <span class="detail-category-tag" id="detail-category-tag">Core CS</span>
+              </div>
+              <h1 class="detail-title" id="detail-subject-title">Data Structures &amp; Algorithms</h1>
+              <p class="detail-meta-line" id="detail-meta-line">5 units · 18 files · Question papers ready</p>
+            </div>
+
+            <div class="detail-actions">
+              <button class="btn-subtle" id="detail-bookmark-btn" title="Save this subject">
+                <span class="material-symbols-outlined" id="detail-bookmark-icon">bookmark_border</span>
+                <span id="detail-bookmark-text">Save</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Subject Tabs (Units vs PYQs) -->
+          <div class="detail-tabs-bar">
+            <button class="detail-tab active" data-detail-tab="units" id="tab-units-btn">
+              <span>Course Units</span>
+              <span class="tab-count" id="tab-units-count">5</span>
+            </button>
+            <button class="detail-tab" data-detail-tab="pyqs" id="tab-pyqs-btn">
+              <span>Question Papers (PYQs)</span>
+              <span class="tab-count" id="tab-pyqs-count">3</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Subject Content List -->
+        <div class="detail-content-area" id="detail-content-area">
+          <!-- Populated via app.js -->
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ═══ Slot C: Quiet Bottom Sponsor Banner (If Active) ═══ -->
+    <div class="ad-slot-bottom-wrap" id="ad-slot-bottom" style="display:none;"></div>
+    
+    <!-- ═══ Custom AdSense Script Container (If Active) ═══ -->
+    <div class="ad-slot-script-wrap" id="ad-slot-script" style="display:none;"></div>
+
+    <!-- ═══ Minimal Footer ═══ -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span>CNI — College Notes Index</span>
+          <span class="footer-sep">·</span>
+          <span>Open Source MIT</span>
+        </div>
+        <div class="footer-right">
+          <a href="https://github.com/Bulbule-Tanmay/StudySite" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+          <a href="https://github.com/Bulbule-Tanmay/StudySite/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer-link">Guidelines</a>
+          <button class="footer-link-btn" id="footer-admin-link">Admin</button>
+          <button class="footer-link-btn" id="scroll-to-top-btn">Top</button>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       COMMAND PALETTE & MODALS
+       ══════════════════════════════════════════════════════ -->
+
+  <!-- ═══ Command Palette Search Dialog (⌘K / Ctrl K) ═══ -->
+  <div class="command-palette-backdrop" id="command-palette" role="dialog" aria-modal="true" aria-label="Search Palette" style="display:none;">
+    <div class="command-palette-box">
+      <div class="command-input-row">
+        <span class="material-symbols-outlined command-search-icon">search</span>
+        <input type="text" id="palette-input" class="command-input" placeholder="Type a subject name, unit, or file…" autocomplete="off">
+        <kbd class="command-esc-key" id="palette-close-key">ESC</kbd>
+      </div>
+
+      <div class="command-results-list" id="palette-results">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="command-palette-footer">
+        <span class="footer-hint"><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
+        <span class="footer-hint"><kbd>↵</kbd> Select</span>
+        <span class="footer-hint"><kbd>ESC</kbd> Close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ File Preview Overlay / Bottom Sheet ═══ -->
+  <div class="preview-backdrop" id="preview-modal" role="dialog" aria-modal="true" aria-label="Document Viewer" style="display:none;">
+    <div class="preview-sheet">
+      <div class="preview-sheet-header">
+        <div class="preview-header-meta">
+          <span class="preview-format-tag" id="preview-file-badge">PDF</span>
+          <div class="preview-title-col">
+            <h2 class="preview-heading" id="preview-file-title">Document Title</h2>
+            <span class="preview-sub-caption" id="preview-subject-tag">Subject · Unit</span>
+          </div>
+        </div>
+
+        <div class="preview-sheet-actions">
+          <button class="btn-primary btn-sm" id="preview-download-btn">
+            <span class="material-symbols-outlined">download</span>
+            <span>Download</span>
+          </button>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="icon-btn-quiet" id="preview-external-link" title="Open in new window">
+            <span class="material-symbols-outlined">open_in_new</span>
+          </a>
+          <button class="icon-btn-quiet" id="preview-close-btn" aria-label="Close document">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="preview-sheet-body" id="preview-frame-container">
+        <!-- Embedded viewer iframe -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Quiet Admin Console Modal (Accessible via Footer) ═══ -->
+  <div class="admin-backdrop" id="admin-modal" role="dialog" aria-modal="true" aria-label="Admin Console" style="display:none;">
+    <div class="admin-dialog admin-dialog--wide">
+      <div class="admin-dialog-header">
+        <div class="admin-title-col">
+          <h2 class="admin-title">CNI Administration</h2>
+          <span class="admin-sub">Telemetry, monetization, and system security</span>
+        </div>
+        <button class="icon-btn-quiet" id="admin-modal-close" aria-label="Close Admin">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <div class="admin-dialog-body" id="admin-dialog-body">
+        <!-- Auth View (When Locked) -->
+        <div id="admin-auth-view">
+          <p class="admin-note">Enter master PIN to review telemetry, manage ad spaces, or configure settings.</p>
+          <form id="admin-login-form" class="admin-form-compact">
+            <input type="password" id="admin-pin-field" class="admin-input" placeholder="PIN (Default: admin123)" required autocomplete="current-password">
+            <div class="admin-error-text" id="admin-error-text" style="display:none;"></div>
+            <div class="admin-auth-btn-row">
+              <button type="submit" class="btn-primary">Unlock Console</button>
+              <button type="button" class="btn-quiet" id="admin-demo-unlock">Quick Unlock</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Unlocked Admin Dashboard View -->
+        <div id="admin-dashboard-view" style="display:none;">
+          <!-- Admin Tabs Header -->
+          <div class="admin-nav-tabs">
+            <button class="admin-nav-tab active" data-tab="analytics" id="admin-tab-nav-analytics">
+              <span class="material-symbols-outlined">monitoring</span>
+              <span>Analytics</span>
+            </button>
+            <button class="admin-nav-tab" data-tab="ads" id="admin-tab-nav-ads">
+              <span class="material-symbols-outlined">campaign</span>
+              <span>Ad Spaces (A, B, C)</span>
+            </button>
+            <button class="admin-nav-tab" data-tab="security" id="admin-tab-nav-security">
+              <span class="material-symbols-outlined">lock</span>
+              <span>Password &amp; Security</span>
+            </button>
+          </div>
+
+          <!-- ─── TAB 1: ANALYTICS & INSIGHTS ─── -->
+          <div class="admin-pane active" id="admin-pane-analytics">
+            <!-- 4 Top KPI Cards -->
+            <div class="admin-stats-summary">
+              <div class="admin-stat-item">
+                <span class="stat-num" id="admin-stat-views">0</span>
+                <span class="stat-txt">Total Views</span>
+              </div>
+              <div class="admin-stat-item">
+                <span class="stat-num" id="admin-stat-downloads">0</span>
+                <span class="stat-txt">Downloads</span>
+              </div>
+              <div class="admin-stat-item">
+                <span class="stat-num" id="admin-stat-previews">0</span>
+                <span class="stat-txt">Previews</span>
+              </div>
+              <div class="admin-stat-item">
+                <span class="stat-num" id="admin-stat-searches">0</span>
+                <span class="stat-txt">Searches</span>
+              </div>
+            </div>
+
+            <!-- Top Downloaded Notes Leaderboard -->
+            <div class="admin-data-card">
+              <h4 class="admin-section-sub">Top Downloaded Notes</h4>
+              <div class="admin-table-scroll">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Document Name</th>
+                      <th>Subject</th>
+                      <th>Count</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-top-downloads-tbody">
+                    <!-- Populated via app.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Security Audit Events -->
+            <div class="admin-data-card">
+              <h4 class="admin-section-sub">Recent Activity &amp; Audit Log</h4>
+              <div class="admin-audit-log-wrap" id="admin-audit-logs">
+                <!-- Injected via app.js -->
+              </div>
+            </div>
+
+            <div class="admin-actions-bar">
+              <button class="btn-quiet" id="admin-export-analytics-btn">
+                <span class="material-symbols-outlined">download</span> Export JSON
+              </button>
+              <button class="btn-quiet" id="admin-reset-analytics-btn">
+                <span class="material-symbols-outlined">restart_alt</span> Reset Counters
+              </button>
+            </div>
+          </div>
+
+          <!-- ─── TAB 2: AD SPACES MANAGER (A + B + C + AdSense) ─── -->
+          <div class="admin-pane" id="admin-pane-ads">
+            <p class="admin-note" style="margin-bottom:1rem;">
+              Configure non-intrusive sponsor slots (A, B, C) and custom Google AdSense tags. Slots appear tastefully on the site with quiet styling.
+            </p>
+
+            <form id="admin-ads-form" class="admin-ads-form-wrap">
+              <!-- Slot A: Top Header Banner -->
+              <div class="ad-config-box">
+                <div class="ad-config-header">
+                  <div>
+                    <span class="ad-tag-badge">Slot A</span>
+                    <h4 class="ad-config-title">Top Header Banner</h4>
+                    <p class="ad-config-sub">A thin, calm sponsor line right beneath the site header.</p>
+                  </div>
+                  <label class="switch-toggle" aria-label="Toggle Slot A">
+                    <input type="checkbox" id="ad-top-active">
+                    <span class="switch-rail"></span>
+                  </label>
+                </div>
+                <div class="ad-config-fields">
+                  <div class="field-row">
+                    <div class="field-col">
+                      <label class="field-label">Sponsor Badge</label>
+                      <input type="text" id="ad-top-sponsor" class="admin-input" placeholder="e.g. Partner">
+                    </div>
+                    <div class="field-col">
+                      <label class="field-label">Banner Headline</label>
+                      <input type="text" id="ad-top-title" class="admin-input" placeholder="e.g. Semester Exam Prep Kit — Solved PYQs">
+                    </div>
+                  </div>
+                  <div class="field-row">
+                    <div class="field-col">
+                      <label class="field-label">Action Label</label>
+                      <input type="text" id="ad-top-cta" class="admin-input" placeholder="e.g. Explore kit">
+                    </div>
+                    <div class="field-col">
+                      <label class="field-label">Target Link URL</label>
+                      <input type="url" id="ad-top-url" class="admin-input" placeholder="https://example.com/sponsor">
+                    </div>
+                  </div>
+                  <div class="ad-stat-line">
+                    <span>Impressions: <strong id="ad-top-stat-imp">0</strong></span>
+                    <span class="meta-dot">·</span>
+                    <span>Clicks: <strong id="ad-top-stat-clicks">0</strong></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slot B: In-Feed Subject Directory Card -->
+              <div class="ad-config-box">
+                <div class="ad-config-header">
+                  <div>
+                    <span class="ad-tag-badge">Slot B</span>
+                    <h4 class="ad-config-title">In-Feed Subject Directory Card</h4>
+                    <p class="ad-config-sub">Integrated seamlessly in the 2-column index after the second subject.</p>
+                  </div>
+                  <label class="switch-toggle" aria-label="Toggle Slot B">
+                    <input type="checkbox" id="ad-infeed-active">
+                    <span class="switch-rail"></span>
+                  </label>
+                </div>
+                <div class="ad-config-fields">
+                  <div class="field-row">
+                    <div class="field-col">
+                      <label class="field-label">Sponsor Tag</label>
+                      <input type="text" id="ad-infeed-sponsor" class="admin-input" placeholder="e.g. Featured Resource">
+                    </div>
+                    <div class="field-col">
+                      <label class="field-label">Card Headline</label>
+                      <input type="text" id="ad-infeed-title" class="admin-input" placeholder="e.g. Master DSA &amp; Systems Faster">
+                    </div>
+                  </div>
+                  <div class="field-col" style="margin-bottom:0.6rem;">
+                    <label class="field-label">Description</label>
+                    <input type="text" id="ad-infeed-desc" class="admin-input" placeholder="e.g. 250+ Curated interview problems and visual guides.">
+                  </div>
+                  <div class="field-row">
+                    <div class="field-col">
+                      <label class="field-label">Action Button Label</label>
+                      <input type="text" id="ad-infeed-cta" class="admin-input" placeholder="e.g. Access guide">
+                    </div>
+                    <div class="field-col">
+                      <label class="field-label">Target Link URL</label>
+                      <input type="url" id="ad-infeed-url" class="admin-input" placeholder="https://example.com/resource">
+                    </div>
+                  </div>
+                  <div class="ad-stat-line">
+                    <span>Impressions: <strong id="ad-infeed-stat-imp">0</strong></span>
+                    <span class="meta-dot">·</span>
+                    <span>Clicks: <strong id="ad-infeed-stat-clicks">0</strong></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slot C: Bottom Footer Sponsor Line -->
+              <div class="ad-config-box">
+                <div class="ad-config-header">
+                  <div>
+                    <span class="ad-tag-badge">Slot C</span>
+                    <h4 class="ad-config-title">Bottom Footer Sponsor Line</h4>
+                    <p class="ad-config-sub">Appears cleanly right above the site footer.</p>
+                  </div>
+                  <label class="switch-toggle" aria-label="Toggle Slot C">
+                    <input type="checkbox" id="ad-bottom-active">
+                    <span class="switch-rail"></span>
+                  </label>
+                </div>
+                <div class="ad-config-fields">
+                  <div class="field-row">
+                    <div class="field-col">
+                      <label class="field-label">Headline / Message</label>
+                      <input type="text" id="ad-bottom-title" class="admin-input" placeholder="e.g. Looking for semester exam coaching or peer study circles?">
+                    </div>
+                    <div class="field-col">
+                      <label class="field-label">Target Link URL</label>
+                      <input type="url" id="ad-bottom-url" class="admin-input" placeholder="https://example.com/partner">
+                    </div>
+                  </div>
+                  <div class="ad-stat-line">
+                    <span>Impressions: <strong id="ad-bottom-stat-imp">0</strong></span>
+                    <span class="meta-dot">·</span>
+                    <span>Clicks: <strong id="ad-bottom-stat-clicks">0</strong></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Google AdSense / Custom HTML Script -->
+              <div class="ad-config-box">
+                <div class="ad-config-header">
+                  <div>
+                    <span class="ad-tag-badge">Script</span>
+                    <h4 class="ad-config-title">Google AdSense / Custom Script Snippet</h4>
+                    <p class="ad-config-sub">Paste third-party script or responsive ad HTML snippet.</p>
+                  </div>
+                  <label class="switch-toggle" aria-label="Toggle Custom Script">
+                    <input type="checkbox" id="ad-custom-active">
+                    <span class="switch-rail"></span>
+                  </label>
+                </div>
+                <div class="ad-config-fields">
+                  <div class="field-col">
+                    <label class="field-label">Ad HTML / &lt;script&gt; Tag</label>
+                    <textarea id="ad-custom-code" class="admin-textarea" rows="3" placeholder="<!-- Paste AdSense <script> or <ins> code here -->"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="admin-actions-bar">
+                <button type="submit" class="btn-primary" id="save-ads-btn">
+                  <span class="material-symbols-outlined">save</span>
+                  <span>Save Ad Configuration</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- ─── TAB 3: PASSWORD & SECURITY ─── -->
+          <div class="admin-pane" id="admin-pane-security">
+            <!-- Change Password Card -->
+            <div class="admin-data-card">
+              <h4 class="admin-section-sub">Change Master Admin Password</h4>
+              <p class="admin-note" style="margin-bottom:0.75rem;">
+                Passwords are encrypted using <strong>salted SHA-256 cryptographic hashing</strong> on the server.
+              </p>
+              <form id="admin-change-password-form" class="admin-form-compact">
+                <div class="field-row">
+                  <div class="field-col">
+                    <label class="field-label">Current Password</label>
+                    <input type="password" id="admin-curr-password" class="admin-input" placeholder="Current PIN" required>
+                  </div>
+                  <div class="field-col">
+                    <label class="field-label">New Password (min 4 chars)</label>
+                    <input type="password" id="admin-new-password" class="admin-input" placeholder="New PIN" required>
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="field-col">
+                    <label class="field-label">Confirm New Password</label>
+                    <input type="password" id="admin-confirm-password" class="admin-input" placeholder="Confirm new PIN" required>
+                  </div>
+                  <div class="field-col" style="display:flex; align-items:flex-end;">
+                    <button type="submit" class="btn-primary" style="width:100%;">
+                      <span class="material-symbols-outlined">key</span> Update Password
+                    </button>
+                  </div>
+                </div>
+                <div class="admin-feedback-msg" id="password-feedback-msg" style="display:none;"></div>
+              </form>
+            </div>
+
+            <!-- Security Governance Status -->
+            <div class="admin-data-card">
+              <h4 class="admin-section-sub">Security Governance Status</h4>
+              <div class="sec-status-row">
+                <div class="sec-status-item">
+                  <span class="sec-status-lbl">Hash Algorithm</span>
+                  <strong class="sec-status-val">SHA-256 + Salt</strong>
+                </div>
+                <div class="sec-status-item">
+                  <span class="sec-status-lbl">Brute-Force Shield</span>
+                  <strong class="sec-status-val">5 attempts / 60s lock</strong>
+                </div>
+                <div class="sec-status-item">
+                  <span class="sec-status-lbl">Session Token</span>
+                  <strong class="sec-status-val" id="admin-token-ttl-val">Bearer 2h TTL</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Repository tree.json Export -->
+            <div class="admin-data-card">
+              <h4 class="admin-section-sub">Repository Tree Export</h4>
+              <p class="admin-note" style="margin-bottom:0.75rem;">
+                Download the current <code>tree.json</code> file to inspect or commit directly to Git.
+              </p>
+              <button class="btn-quiet" id="admin-export-tree">
+                <span class="material-symbols-outlined">download</span> Download tree.json
+              </button>
+            </div>
+
+            <div class="admin-actions-bar">
+              <button class="btn-quiet" id="admin-logout-btn">
+                <span class="material-symbols-outlined">lock</span> Lock Admin Session
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Toast Notifications ═══ -->
+  <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

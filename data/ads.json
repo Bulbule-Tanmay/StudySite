@@ -1,0 +1,30 @@
+{
+  "top": {
+    "enabled": false,
+    "sponsor": "Verified Sponsor 2026",
+    "title": "Semester Exam Prep Kit — High-Yield Formula Sheets & Solved PYQs",
+    "cta": "Explore Kit",
+    "url": "https://github.com/Bulbule-Tanmay/StudySite",
+    "impressions": 3,
+    "clicks": 1
+  },
+  "infeed": {
+    "enabled": false,
+    "sponsor": "Featured Resource",
+    "title": "Master DSA & System Design Faster",
+    "desc": "250+ Curated interview problems, interactive visual guides, and step-by-step algorithms walkthroughs.",
+    "cta": "Access Guide",
+    "url": "https://github.com/Bulbule-Tanmay/StudySite",
+    "impressions": 2,
+    "clicks": 0
+  },
+  "bottom": {
+    "enabled": false,
+    "title": "Have class notes or question papers? Help fellow students by contributing!",
+    "url": "https://github.com/Bulbule-Tanmay/StudySite",
+    "impressions": 2,
+    "clicks": 0
+  },
+  "customCode": "",
+  "customActive": false
+}
