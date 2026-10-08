@@ -6,19 +6,6 @@ CNI is designed with a calm, high-craft aesthetic (inspired by Linear, Vercel do
 
 ---
 
-## ✨ Design Principles & Features
-
-- **Quiet, Editorial Typography**: Google Fonts **Newsreader** (classic serif display for headlines and subject titles) paired with **Inter** (refined sans for UI and file listings) and tabular numbers.
-- **Warm-Neutral Themes**: Carefully tuned dark mode (`#0E0F11` background, `#15171A` surface) and warm light mode (`#FAFAF8` background, `#FFFFFF` surface) with zero-flash persistence and manual toggle.
-- **Fast Command Palette (`⌘K` / `Ctrl K`)**: Quick keyboard search across all 14 subjects, units, and individual files with instant selection and preview.
-- **Subject Directory & Dedicated Views**:
-  - **Index View**: 2-column clean editorial cards with subject codes, serif titles, categories, and material counts.
-  - **Dedicated Subject View (`#/subject/:code`)**: Deep-linkable routes with breadcrumb navigation, Course Units and Previous Year Papers (PYQs) tabs, and clean table-like file listings.
-- **Accessible Document Viewer**: Clean bottom sheet / modal with PDF iframe preview, download action, and native share.
-- **Zero Mocked Clutter**: No neon glow effects, no purple-blue gradient buttons, no decorative pill overload, and no vanity metrics. Real dynamic statistics computed from the filesystem tree.
-- **GitHub-Only Contribution Model**: Clean and predictable repository workflow without in-app upload forms or distracting banners.
-
----
 
 ## 🚀 Quick Start
 
