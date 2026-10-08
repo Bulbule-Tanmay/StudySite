@@ -14,10 +14,9 @@
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="CNI — College Notes Index" name="twitter:title"/>
 <meta content="CNI (College Notes Index) helps G.H. Raisoni students quickly find subject notes, PYQs, and study material in one organized place." name="twitter:description"/>
-<meta content="#051424" name="theme-color"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<meta content="#0b1020" name="theme-color"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -27,258 +26,302 @@
   "inLanguage": "en"
 }
 </script>
-<script src="https://cdn.tailwindcss.com"></script>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
-<script id="tailwind-config">
-tailwind.config = { darkMode: "class", theme: { extend: {
-  "colors": { "inverse-primary": "#006875", "on-primary-fixed": "#001f24", "secondary-container": "#3131c0", "surface-container": "#122131", "error": "#ffb4ab", "tertiary-container": "#c8d0ea", "inverse-surface": "#d4e4fa", "on-primary": "#00363d", "secondary": "#c0c1ff", "surface-container-highest": "#273647", "on-tertiary-container": "#51596f", "surface-dim": "#051424", "on-secondary-fixed": "#07006c", "surface-container-high": "#1c2b3c", "primary-container": "#00e5ff", "tertiary-fixed-dim": "#bec6e0", "on-tertiary-fixed": "#131b2e", "primary-fixed": "#9cf0ff", "surface-tint": "#00daf3", "surface-bright": "#2c3a4c", "outline": "#849396", "surface": "#051424", "surface-variant": "#273647", "on-secondary-container": "#b0b2ff", "surface-container-low": "#0d1c2d", "on-tertiary-fixed-variant": "#3f465c", "error-container": "#93000a", "background": "#051424", "on-error-container": "#ffdad6", "on-background": "#d4e4fa", "on-secondary": "#1000a9", "secondary-fixed-dim": "#c0c1ff", "outline-variant": "#3b494c", "on-surface-variant": "#bac9cc", "tertiary-fixed": "#dae2fd", "primary-fixed-dim": "#00daf3", "on-surface": "#d4e4fa", "surface-container-lowest": "#010f1f", "on-secondary-fixed-variant": "#2f2ebe", "on-error": "#690005", "primary": "#c3f5ff", "inverse-on-surface": "#233143", "on-primary-fixed-variant": "#004f58", "on-tertiary": "#283044", "tertiary": "#e8ecff", "on-primary-container": "#00626e", "secondary-fixed": "#e1e0ff" },
-  "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-  "spacing": { "margin-mobile": "20px", "base": "8px", "container-max": "1280px", "gutter": "24px", "margin-desktop": "64px" },
-  "fontFamily": { "label-sm": ["JetBrains Mono"], "headline-md": ["Hanken Grotesk"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "display-lg": ["Hanken Grotesk"] },
-  "fontSize": { "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }] }
-} } };
-</script>
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-  @layer base {
-    body { overscroll-behavior: none; }
-    .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
-    .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+  :root {
+    color-scheme: dark;
   }
-  body{
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #e5ecff;
     background:
-      radial-gradient(1000px 500px at -5% -10%, rgba(0,229,255,.14), transparent 60%),
-      radial-gradient(1000px 500px at 110% -20%, rgba(192,193,255,.18), transparent 60%),
-      #051424;
+      radial-gradient(900px 420px at -8% -5%, rgba(99,102,241,0.35), transparent 60%),
+      radial-gradient(700px 360px at 110% -10%, rgba(20,184,166,0.25), transparent 58%),
+      linear-gradient(180deg, #080d1f 0%, #070a16 100%);
+    min-height: 100vh;
+    overscroll-behavior: none;
   }
-  ::-webkit-scrollbar { display: none; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 450, 'GRAD' 0, 'opsz' 24;
+  }
+  .app-shell {
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  @media (min-width: 1024px) {
+    .app-shell {
+      grid-template-columns: 280px minmax(0, 1fr);
+      padding: 20px;
+      gap: 20px;
+    }
+  }
+  .desktop-sidebar {
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    .desktop-sidebar {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(148,163,184,0.2);
+      border-radius: 24px;
+      background: rgba(15,23,42,0.78);
+      backdrop-filter: blur(18px);
+      padding: 24px;
+      gap: 20px;
+      position: sticky;
+      top: 20px;
+      height: calc(100vh - 40px);
+    }
+  }
+  .nav-pill {
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9caecf;
+    background: transparent;
+    transition: all .2s ease;
+  }
+  .nav-pill:hover,
+  .nav-pill:focus-visible {
+    color: #f8fbff;
+    border-color: rgba(96,165,250,0.5);
+    background: rgba(15,23,42,0.8);
+    outline: none;
+  }
+  .nav-pill.active {
+    color: #dff8ff;
+    border-color: rgba(56,189,248,0.45);
+    background: linear-gradient(140deg, rgba(30,64,175,0.45), rgba(13,148,136,0.35));
+    box-shadow: 0 8px 24px rgba(14,116,144,0.3);
+  }
+  .workspace {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  @media (min-width: 1024px) {
+    .workspace {
+      min-height: calc(100vh - 40px);
+      border: 1px solid rgba(148,163,184,0.18);
+      border-radius: 24px;
+      background: rgba(15,23,42,0.7);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+    }
+  }
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(148,163,184,0.14);
+    background: rgba(8,13,31,0.88);
+    backdrop-filter: blur(14px);
+    padding: env(safe-area-inset-top, 0px) 16px 14px;
+  }
+  @media (min-width: 640px) {
+    .topbar { padding: env(safe-area-inset-top, 0px) 24px 14px; }
+  }
+  .search-input {
+    width: 100%;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid rgba(148,163,184,0.3);
+    background: rgba(15,23,42,0.85);
+    color: #f1f5f9;
+    padding: 0 14px 0 40px;
+  }
+  .search-input:focus-visible {
+    outline: none;
+    border-color: rgba(56,189,248,0.7);
+    box-shadow: 0 0 0 3px rgba(14,165,233,0.2);
+  }
+  .search-wrap {
+    position: relative;
+  }
+  .search-wrap .material-symbols-outlined {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #8fa3c7;
+    font-size: 19px;
+  }
   .view { display: none; }
   .view.active { display: block; }
-  .chip.active { background: linear-gradient(135deg,#3131c0,#4848ea); color: #e4e6ff; box-shadow: 0 8px 24px rgba(44,49,214,.35); }
-  .fade-in { animation: fadeIn .25s ease both; }
-  @keyframes fadeIn { from { opacity:0; transform: translateY(6px);} to {opacity:1; transform:none;} }
-  #pdf-modal { transition: opacity .2s ease; }
-  #pdf-modal.closed { opacity:0; pointer-events:none; }
-  #pdf-panel { transition: transform .25s ease; }
-  #pdf-modal.closed #pdf-panel { transform: translateY(24px); }
-  .panel { border: 1px solid rgba(132,147,150,.24); background: linear-gradient(160deg,rgba(39,54,71,.78),rgba(13,28,45,.84)); backdrop-filter: blur(16px); }
-  .panel-soft { border: 1px solid rgba(132,147,150,.2); background: linear-gradient(170deg,rgba(28,43,60,.66),rgba(13,28,45,.7)); }
-  .elevate { box-shadow: 0 18px 40px rgba(1,15,31,.5); }
-  .ring-hover { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
-  .ring-hover:hover { transform: translateY(-2px); border-color: rgba(0,218,243,.45); box-shadow: 0 10px 30px rgba(0,218,243,.15); }
-  .glow:hover { box-shadow: 0 10px 30px rgba(0,229,255,0.16); }
+  .content {
+    flex: 1;
+    padding: 18px 16px 90px;
+  }
+  @media (min-width: 640px) {
+    .content { padding: 24px 24px 96px; }
+  }
+  @media (min-width: 1024px) {
+    .content { padding: 28px 30px 32px; }
+  }
+  .card {
+    border: 1px solid rgba(148,163,184,0.2);
+    border-radius: 18px;
+    background: linear-gradient(160deg, rgba(30,41,59,0.86), rgba(15,23,42,0.84));
+  }
+  .card-soft {
+    border: 1px solid rgba(148,163,184,0.14);
+    border-radius: 16px;
+    background: rgba(15,23,42,0.62);
+  }
+  .card-hover {
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .card-hover:hover,
+  .card-hover:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(56,189,248,0.45);
+    box-shadow: 0 10px 30px rgba(2,132,199,0.2);
+    outline: none;
+  }
+  .chip {
+    border: 1px solid rgba(148,163,184,0.22);
+    background: rgba(15,23,42,0.5);
+    color: #b9cae5;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all .18s ease;
+  }
+  .chip:hover,
+  .chip:focus-visible {
+    color: #eff6ff;
+    border-color: rgba(56,189,248,0.5);
+    outline: none;
+  }
+  .chip.active {
+    color: #e0fdff;
+    border-color: rgba(34,211,238,0.6);
+    background: linear-gradient(145deg, rgba(37,99,235,0.5), rgba(13,148,136,0.42));
+  }
+  .mobile-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    border-top: 1px solid rgba(148,163,184,0.2);
+    background: rgba(2,6,23,0.9);
+    backdrop-filter: blur(14px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .mobile-nav button {
+    color: #94a3b8;
+    transition: color .2s ease;
+  }
+  .mobile-nav button.active { color: #67e8f9; }
+  @media (min-width: 1024px) {
+    .mobile-nav { display: none; }
+  }
+  #search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    background: rgba(2,6,23,0.82);
+    backdrop-filter: blur(10px);
+    display: none;
+    overflow-y: auto;
+    padding: max(env(safe-area-inset-top, 0px), 16px) 16px calc(env(safe-area-inset-bottom, 0px) + 16px);
+  }
+  #search-overlay.open { display: block; }
+  @media (min-width: 640px) {
+    #search-overlay { padding: max(env(safe-area-inset-top, 0px), 26px) 24px 28px; }
+  }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
 </style>
 </head>
-<body class="text-on-surface font-body-md">
-
-<!-- ============ HEADER ============ -->
-<header class="fixed top-0 w-full z-50 bg-surface/55 backdrop-blur-2xl border-b border-outline-variant/30 pt-safe">
-  <div class="h-20 px-margin-mobile flex items-center justify-between gap-4">
-    <div class="flex items-center gap-3 cursor-pointer" onclick="go('home')">
-      <div class="h-9 w-9 rounded-lg bg-primary-container/15 border border-primary-container/30 flex items-center justify-center shrink-0">
-        <span class="material-symbols-outlined text-primary-container text-[20px]">school</span>
+<body>
+<div class="app-shell">
+  <aside class="desktop-sidebar">
+    <div class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-xl bg-cyan-400/15 border border-cyan-300/35 flex items-center justify-center text-cyan-200">
+        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">school</span>
       </div>
-      <span class="font-headline-md text-headline-md-mobile text-on-surface hidden sm:block">CNI</span>
+      <div>
+        <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Study Dashboard</p>
+        <h1 class="text-xl font-bold text-slate-100">CNI Portal</h1>
+      </div>
     </div>
-    <div class="flex-1 max-w-md panel-soft rounded-full px-4 h-10 flex items-center gap-2">
-      <span class="material-symbols-outlined text-outline text-[20px]">search</span>
-      <input id="search-input" class="bg-transparent border-none outline-none text-body-md text-on-surface w-full placeholder:text-on-surface-variant" placeholder="Search subjects, files..." type="text"/>
+    <nav class="flex flex-col gap-2">
+      <button class="nav-pill" data-nav="home" data-route="home"><span class="material-symbols-outlined">home</span>Home</button>
+      <button class="nav-pill" data-nav="subjects" data-route="subjects"><span class="material-symbols-outlined">grid_view</span>Subjects</button>
+      <button class="nav-pill" data-nav="favorites" data-route="favorites"><span class="material-symbols-outlined">grade</span>Favorites</button>
+      <button class="nav-pill" data-nav="profile" data-route="profile"><span class="material-symbols-outlined">support_agent</span>Support</button>
+    </nav>
+    <div class="mt-auto card-soft p-4 text-sm text-slate-300">
+      <p class="font-semibold text-slate-100 mb-1">Quick tip</p>
+      <p>Use search to jump directly to files, units, and PYQs in one step.</p>
     </div>
-    <div class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center shrink-0 cursor-pointer" onclick="go('profile')">
-      <span class="material-symbols-outlined text-on-primary-fixed text-[18px]">person</span>
-    </div>
-  </div>
-</header>
+  </aside>
 
-<!-- ============ SEARCH RESULTS OVERLAY ============ -->
-<div id="search-overlay" class="fixed inset-0 z-40 bg-surface/90 backdrop-blur-md pt-24 px-margin-mobile pb-24 hidden overflow-y-auto">
-  <div class="flex items-center justify-between mb-4">
-    <h2 class="font-headline-md text-headline-md text-on-surface">Results</h2>
-    <button onclick="closeSearch()" class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">close</span>Close</button>
+  <div class="workspace">
+    <header class="topbar">
+      <div class="flex items-center gap-3">
+        <div class="lg:hidden w-10 h-10 rounded-xl bg-cyan-400/10 border border-cyan-300/25 flex items-center justify-center text-cyan-200">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">school</span>
+        </div>
+        <div>
+          <p id="topbar-subtitle" class="text-xs uppercase tracking-[0.16em] text-slate-400">Welcome back</p>
+          <h2 id="topbar-title" class="text-lg sm:text-xl font-semibold text-slate-100">College Notes Index</h2>
+        </div>
+      </div>
+      <div class="search-wrap mt-3">
+        <span class="material-symbols-outlined">search</span>
+        <input id="search-input" class="search-input" type="text" placeholder="Search subjects, units, and files" aria-label="Search subjects and files"/>
+      </div>
+    </header>
+
+    <main class="content">
+      <section id="view-home" class="view active"></section>
+      <section id="view-subjects" class="view"></section>
+      <section id="view-detail" class="view"></section>
+      <section id="view-favorites" class="view"></section>
+      <section id="view-profile" class="view"></section>
+    </main>
   </div>
-  <div id="search-results" class="flex flex-col gap-3"></div>
 </div>
 
-<main class="relative w-full pt-20 pb-24 min-h-screen">
-
-  <!-- ============ HOME VIEW ============ -->
-  <section id="view-home" class="view active">
-    <div class="flex flex-col w-full gap-gutter px-margin-mobile pb-8">
-      <div class="pt-8 fade-in panel rounded-2xl p-6 elevate">
-        <h1 class="font-display-lg text-display-lg text-on-surface mb-2">Welcome Back.</h1>
-        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Access your academic repository. Specifically curated for G.H. Raisoni students.</p>
-      </div>
-
-      <section class="mt-4">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-headline-md text-headline-md text-on-surface">Recent Subjects</h2>
-          <a class="font-label-sm text-label-sm text-primary flex items-center gap-1 hover:text-primary-fixed transition-colors cursor-pointer" onclick="go('subjects')">
-            View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-          </a>
-        </div>
-        <div id="home-subject-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4"></div>
-      </section>
-
-      <section class="mt-8">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-headline-md text-headline-md text-on-surface">Trending Notes</h2>
-        </div>
-        <div id="home-trending" class="flex flex-col gap-3"></div>
-      </section>
-
-      <section class="mt-8 mb-6">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary-container">history</span> Latest PYQs
-          </h2>
-        </div>
-        <div id="home-pyqs" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
-      </section>
+<div id="search-overlay" aria-modal="true" role="dialog">
+  <div class="max-w-4xl mx-auto">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="text-xl font-semibold text-slate-100">Search Results</h3>
+      <button id="search-close" class="h-10 px-4 rounded-xl border border-slate-500/50 bg-slate-900/70 text-slate-100">Close</button>
     </div>
-  </section>
+    <div id="search-results" class="space-y-3"></div>
+  </div>
+</div>
 
-  <!-- ============ SUBJECTS VIEW ============ -->
-  <section id="view-subjects" class="view">
-    <div class="flex flex-col w-full gap-gutter px-margin-mobile pb-margin-mobile">
-      <div class="flex flex-col gap-2 mt-6 fade-in">
-        <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Subject Index</h1>
-        <p class="font-body-md text-body-md text-on-surface-variant">Browse notes, past year questions, and lab manuals — sourced live from your notes folder.</p>
-      </div>
-
-      <div id="chip-row" class="flex overflow-x-auto gap-2 pb-2 -mx-margin-mobile px-margin-mobile snap-x"></div>
-
-      <div id="subject-groups" class="flex flex-col gap-6"></div>
-    </div>
-  </section>
-
-  <!-- ============ NOTE DETAIL VIEW ============ -->
-  <section id="view-detail" class="view">
-    <div class="flex items-center gap-4 px-margin-mobile -mt-4 mb-2">
-      <button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim shrink-0" onclick="go('subjects')">
-        <span class="material-symbols-outlined">arrow_back</span>
-      </button>
-      <h1 class="font-headline-md text-headline-md-mobile text-on-surface truncate uppercase tracking-wide">Note Details</h1>
-    </div>
-    <div class="flex flex-col w-full pb-margin-desktop bg-surface px-margin-mobile gap-8 pt-2">
-      <div id="detail-header" class="flex flex-col gap-4 fade-in"></div>
-      <div id="detail-sections" class="flex flex-col gap-8"></div>
-    </div>
-  </section>
-
-  <!-- ============ FAVORITES VIEW ============ -->
-  <section id="view-favorites" class="view">
-    <div class="flex flex-col w-full gap-gutter px-margin-mobile pb-8">
-      <div class="pt-8 fade-in">
-        <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Favorites</h1>
-        <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Star a file from any subject page and it'll show up here for quick access.</p>
-      </div>
-      <div id="favorites-list" class="flex flex-col gap-3 mt-2"></div>
-      <div id="favorites-empty" class="flex flex-col items-center justify-center text-center gap-3 py-16 hidden">
-        <span class="material-symbols-outlined text-on-surface-variant text-[40px]">grade</span>
-        <p class="font-body-md text-on-surface-variant max-w-xs">Nothing starred yet. Open a subject and tap the star on any file.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROFILE / CONTACT VIEW ============ -->
-  <section id="view-profile" class="view">
-    <div class="flex flex-col w-full gap-6 px-margin-mobile pb-8">
-      <div class="pt-8 fade-in">
-        <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Get in Touch</h1>
-        <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Have a question, suggestion, or found a bug in the notes? Drop a line below. Your feedback helps make the platform better for everyone.</p>
-      </div>
-
-      <div class="bg-surface-container rounded-xl p-4 flex flex-col gap-3 border border-outline-variant/30">
-        <h3 class="font-headline-md text-on-surface text-[18px]">Send a Message</h3>
-        <label class="flex flex-col gap-1">
-          <span class="font-label-sm text-label-sm text-on-surface-variant">Name (Optional)</span>
-          <input class="bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-3 h-11 text-body-md text-on-surface outline-none focus:border-primary-container transition-colors" placeholder="Your name" type="text"/>
-        </label>
-        <label class="flex flex-col gap-1">
-          <span class="font-label-sm text-label-sm text-on-surface-variant">Email (Optional)</span>
-          <input class="bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-3 h-11 text-body-md text-on-surface outline-none focus:border-primary-container transition-colors" placeholder="your@email.com" type="email"/>
-        </label>
-        <label class="flex flex-col gap-1">
-          <span class="font-label-sm text-label-sm text-on-surface-variant">Message</span>
-          <textarea class="bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-3 py-2 text-body-md text-on-surface outline-none focus:border-primary-container transition-colors min-h-[100px]" placeholder="How can we help?"></textarea>
-        </label>
-        <button onclick="sendMessage()" class="mt-1 h-11 rounded-lg bg-primary-container text-on-primary-container font-body-md font-semibold flex items-center justify-center gap-2 hover:brightness-110 transition">
-          Send Message <span class="material-symbols-outlined text-[18px]">send</span>
-        </button>
-      </div>
-
-      <div class="bg-secondary-container rounded-xl p-4 flex flex-col gap-3">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-lg bg-white/15 flex items-center justify-center shrink-0">
-            <span class="material-symbols-outlined text-tertiary">volunteer_activism</span>
-          </div>
-          <h3 class="font-headline-md text-tertiary text-[16px]">Support the Project</h3>
-        </div>
-        <p class="font-body-md text-[14px] text-secondary-fixed">Maintaining the server and organizing notes takes time. If you find this useful, consider supporting the work!</p>
-        <button class="h-10 rounded-lg bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm flex items-center justify-center gap-2">Buy me a Coffee <span class="material-symbols-outlined text-[16px]">local_cafe</span></button>
-      </div>
-
-      <div class="flex flex-col gap-2">
-        <span class="font-label-sm text-label-sm text-on-surface-variant">Other ways to connect</span>
-        <div class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">code</span> Contribute on GitHub</div>
-        <div class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">bug_report</span> Report an Issue</div>
-      </div>
-
-      <div class="flex flex-col gap-3">
-        <div class="flex items-center justify-between">
-          <h3 class="font-headline-md text-on-surface text-[18px]">Student Feedback</h3>
-          <span class="bg-surface-container-high rounded-full px-2 py-1 font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">★ 4.9 Avg</span>
-        </div>
-        <div class="bg-surface-container rounded-xl p-4 flex flex-col gap-2 border border-outline-variant/30">
-          <span class="text-primary-container text-[14px]">★★★★★</span>
-          <p class="font-body-md text-[14px] text-on-surface italic">"This saved me during finals week. Notes are organized perfectly and easy to search through on mobile."</p>
-          <div class="flex items-center gap-2 mt-1">
-            <div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center font-label-sm text-label-sm">JS</div>
-            <div class="font-label-sm text-label-sm text-on-surface-variant">James S. · Computer Science, Year 3</div>
-          </div>
-        </div>
-        <div class="bg-surface-container rounded-xl p-4 flex flex-col gap-2 border border-outline-variant/30">
-          <span class="text-primary-container text-[14px]">★★★★★</span>
-          <p class="font-body-md text-[14px] text-on-surface italic">"So much cleaner than the old shared drive we used. Love the dark mode for late-night studying."</p>
-          <div class="flex items-center gap-2 mt-1">
-            <div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center font-label-sm text-label-sm">AM</div>
-            <div class="font-label-sm text-label-sm text-on-surface-variant">Aisha M. · Engineering, Year 2</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ============ BOTTOM NAV ============ -->
-<nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/55 backdrop-blur-2xl border-t border-outline-variant/30">
-  <div class="flex justify-around items-center h-16">
-    <a data-nav="home" class="flex flex-col items-center justify-center w-full h-full transition-colors text-primary-fixed-dim" onclick="go('home')"><span class="material-symbols-outlined">home</span><span class="font-label-sm text-label-sm tracking-wide">Home</span></a>
-    <a data-nav="subjects" class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant transition-colors" onclick="go('subjects')"><span class="material-symbols-outlined">menu_book</span><span class="font-label-sm text-label-sm tracking-wide">Subjects</span></a>
-    <a data-nav="favorites" class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant transition-colors" onclick="go('favorites')"><span class="material-symbols-outlined">grade</span><span class="font-label-sm text-label-sm tracking-wide">Favorites</span></a>
-    <a data-nav="profile" class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant transition-colors" onclick="go('profile')"><span class="material-symbols-outlined">account_circle</span><span class="font-label-sm text-label-sm tracking-wide">Profile</span></a>
+<nav class="mobile-nav">
+  <div class="grid grid-cols-4 h-16">
+    <button class="flex flex-col items-center justify-center gap-0.5 text-xs" data-nav="home" data-route="home"><span class="material-symbols-outlined text-[20px]">home</span>Home</button>
+    <button class="flex flex-col items-center justify-center gap-0.5 text-xs" data-nav="subjects" data-route="subjects"><span class="material-symbols-outlined text-[20px]">menu_book</span>Subjects</button>
+    <button class="flex flex-col items-center justify-center gap-0.5 text-xs" data-nav="favorites" data-route="favorites"><span class="material-symbols-outlined text-[20px]">grade</span>Saved</button>
+    <button class="flex flex-col items-center justify-center gap-0.5 text-xs" data-nav="profile" data-route="profile"><span class="material-symbols-outlined text-[20px]">support_agent</span>Help</button>
   </div>
 </nav>
-
-<!-- ============ PDF VIEWER MODAL ============ -->
-<div id="pdf-modal" class="closed fixed inset-0 z-[100] bg-black/70 backdrop-blur-sm flex items-end sm:items-center justify-center">
-  <div id="pdf-panel" class="bg-surface-container-low w-full sm:max-w-2xl sm:rounded-xl rounded-t-2xl h-[88vh] sm:h-[85vh] flex flex-col overflow-hidden border border-outline-variant/40 shadow-2xl">
-    <div class="flex items-center justify-between gap-3 px-4 h-14 border-b border-outline-variant/30 shrink-0">
-      <div class="flex items-center gap-2 min-w-0">
-        <span class="material-symbols-outlined text-error shrink-0" style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-        <span id="pdf-title" class="font-body-md text-on-surface font-semibold truncate">Document</span>
-      </div>
-      <div class="flex items-center gap-1 shrink-0">
-        <a id="pdf-open-tab" href="#" target="_blank" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors" title="Open in new tab"><span class="material-symbols-outlined text-[20px]">open_in_new</span></a>
-        <button onclick="closePdf()" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">close</span></button>
-      </div>
-    </div>
-    <div id="pdf-body" class="flex-1 min-h-0 bg-surface-container-lowest"></div>
-  </div>
-</div>
 
 <script>
 /* ===================================================================
@@ -287,20 +330,20 @@ tailwind.config = { darkMode: "class", theme: { extend: {
 const TREE = {"Files": {"AIKRR": {"AIKRR_UNIT_1": ["UNIT-1.pdf", "Unit I.pdf"], "AIKRR_UNIT_2": ["Unit II Tabu Search AIKRR.pdf", "Unit II AIKRR.pdf"], "AIKRR_UNIT_3": ["Unit III Finding Optimal Paths.pdf"], "AIKRR_UNIT_4": ["Unit IV-Array.pdf", "Unit IV- Pointer.pdf", "Unit IV Logic and Inferences.pdf"], "AIKRR_PYQS": ["AIKRR QB CAE 1.pdf", "AIKRR QB CAE 2.pdf", "AIKRR QB CAE 3.pdf"]}, "BCC": {"BCC_UNIT_I": ["bcc -ch.1 Sakshi w.pdf"], "BCC_UNIT_2": ["bcc -2,3,4 Sakshi.pdf"], "BCC_UNIT_3": ["bcc -2,3,4 Sakshi.pdf"], "BCC_UNIT_4": ["bcc -2,3,4 Sakshi.pdf"], "BCC_UNIT_5": ["bcc -2,3,4 Sakshi.pdf"], "root_files": ["bcc -ch.1 Sakshi w.pdf"]}, "CAO": {"CAo_unit_1": ["CAO Unit 1.pdf"], "CAo_unit_2": ["CAO Unit-3.pdf"], "CAo_unit_3": ["CAO Unit-3.pdf"], "CAo_unit_4": ["CAO Unit-4 (1).pdf"], "CAo_unit_5": ["CAO Unit 5  Notes.pdf"], "CAO_PYQS": ["CAO QB CAE 1.pdf", "CAO QB CAE 2.pdf", "CAO QB CAE 2 Another.pdf", "CAO QB CAE 3.pdf"]}, "CN": {"CN_unit_1": ["CN -1,2 Sakshi.pdf", "Unit I Introduction to Computer Networks.pdf", "Unit I_Question Answers.docx.pdf"], "CN_unit_2": ["CN -1,2 Sakshi.pdf", "Unit II Physical and Data Link Layer.pdf"], "CN_unit_3": ["CN -3,4 Sakshi.pdf"], "CN_unit_4": ["CN -3,4 Sakshi.pdf"], "CN_unit_5": ["CN 5 Sakshi.pdf"], "CN_PYQS": ["QB_CN_CAE 1.docx.pdf"]}, "DBMS": {"DBMS_UNIT_All": ["DBMS SAKSHI .pdf"], "DBMS_PYQ": ["SY DS DBMS Question Bank_SBV.docx.pdf", "SY DS Unit 3 4 DBMS Question Bank_SBV.docx.pdf"]}, "DMGT": {"DMGT_UNIT_I": ["DMGT unit 1 notes Shri.pdf", "dmgt 1.pdf"], "DMGT_UNIT_II": ["DMGT unit 2 and 3.pdf", "DMGT unit 2,3 notes Shri.pdf", "dmgt 2.pdf"], "DMGT_UNIT_III": ["DMGT unit 2 and 3.pdf", "DMGT unit 2 and 3 (1).pdf", "dmgt 3.pdf"], "DMGT_UNIT_IV": ["DMGT3,4.pdf", "DMGT Unit 3_4 notes Shri.pdf", "dmgt 4.pdf"], "DMGT PYQ": ["DMGT QB CAE 1.pdf", "DMGT QB CAE 2.pdf", "DMGT QB CAE 3.pdf"]}, "DSA": {"DSA_UNIT_1": ["Data-Structure-notes.pdf", "DSA-Handwritten-Notes.pdf", "DSA-Unit1.pdf", "DSA_Notes.pdf", "Unit 1 - Introduction to Algorithm and Data Structures.pdf", "Unit 1.pdf"], "DSA_UNIT_2": ["DSA unit2.pdf", "Unit 2.pdf", "Unit 2 -  Linked List- Sorting and Searching Techniques.pptx.pdf"], "DSA_UNIT_3": ["Binary Trees.pdf", "Stack and Queue.pdf", "Unit 3.pdf"], "DSA_UNIT_4": ["8_Trees.pdf", "Binary Search tree.pdf", "UNIT 4 DSA.pptx"], "DSA_UNIT_5": ["Unit 5 Notes.pdf", "unit5.pdf"], "DSA_PYQS": ["DSA QB ALL Units.pdf", "DSA_Q_Bank_CAE2.pdf", "QB_CAE 1 DSA AY 2024-25 SEM-I.pdf"]}, "DWM": {"DWM_UNIT_1": ["DWM -2 Sakshiw.pdf", "DWM part-1 Sakshi.pdf"], "DWM_UNIT_2": ["DWM 1 Sakshi.pdf", "DWM part2 Sakshiw.pdf"], "DWM_UNIT_3": ["DWM -2 Sakshiw.pdf"], "DWM_UNIT_4": ["DWM -2 Sakshiw.pdf"], "DWM_UNIT_5": ["DWM chapter5 Sakshi.pdf"], "DWM pyqs": ["DWM CAE2.docx.pdf", "Elective I Data Warehousing and Mining_Question_Bank_1 (1).pdf"]}, "FLA": {"FLA_UNIT_1": ["FLA part 1 Sakshi.pdf", "Fla part 2 sakshi.pdf", "Unit 1-Formal Language Theory and  Finite Automaton.pdf"], "FLA_UNIT_2": ["FLA part 1 Sakshi.pdf", "Fla part 2 sakshi.pdf", "UNIT2-FLA.pdf"], "FLA_UNIT_3": ["UNIT3-FLA.pdf", "UNITIII-FLA-NOTES.pdf", "Fla part 2 sakshi.pdf"], "FLA_UNIT_4": ["4fla (1).pdf", "Fla part 2 sakshi.pdf"], "FLA_UNIT_5": ["DocScanner 04-May-2023 12-51 (2).pdf", "Fla part 2 sakshi.pdf"], "FLA _PYQS": ["FLA part 1 Sakshi.pdf", "FLA-QB-3.docx.pdf", "SYCS_FLA-CAE2VK (1) (1).docx.pdf", "SYDS_FLA_VK.docx.pdf"]}, "MLA": {"MLA_UNIT_1": ["MLA -1 Sakshiw.pdf"], "MLA_UNIT_2": ["MLA-2 Sakshiw.pdf"], "MLA_UNIT_3": ["MLApart-2 Sakshiw.pdf"], "MLA_UNIT_4": ["MLA part -3 Sakshiw.pdf"], "MLA_UNIT_5": ["MLA-3 Sakshiw.pdf"], "MLA_PYQS": ["MLA VIVA QUESTIONS.docx", "MLA Question bank.docx.pdf", "MLA part-1 Sakshiw.pdf", "MLA CAE3.docx.pdf", "MLA CAE1.docx.pdf"]}, "OOP(new)": {"OOP-UNIT_1": ["unit1_notes.pdf", "Unit1_handwritten.pdf"], "OOP-UNIT_2": ["Unit_2_handwritten.pdf"], "OOPS_PYQS": ["QB Unit 1 and 2 OOP.pdf", "OOP-py-cae1-2023.jpg"]}, "OS": {"OS_UNIT_1": ["OS Sakshi unit(1-5).pdf"], "OS_UNIT_2": ["OS ALL NOTES.pdf", "OS Sakshi .pdf"], "OS_UNIT_3": ["OS ALL NOTES.pdf", "OS Sakshi .pdf"], "OS_UNIT_4": ["OS ALL NOTES.pdf", "OS Sakshi .pdf"], "OS_UNIT_5": ["OS ALL NOTES.pdf", "OS Sakshi .pdf", "OS Unit V.pptx"], "OS_PYQS": ["OS QB CAE 1.pdf", "OS QB CAE 1 DSY.pdf", "OS QB CAE 2.pdf", "OS QB CAE 3.pdf"]}, "QC(new)": {"QC_unit_1": ["Unit- I - Foundations_of_Quantum_Computing.pdf"]}, "SEPM": {"SEPM_UNIT_1": ["Unit I SEPM.pdf", "Unit I Software Process.pdf"], "SEPM_UNIT_2": ["Unit II Software Requirements SEPM.pdf"], "SEPM_UNIT_3": ["Unit III Component Design SPEM.pdf", "Unit III Design Modeling in Software Engineering SEPM.pdf", "Unit III Software Design SPEM.pdf"], "SEPM_UNIT_4": ["Unit IV Software Testing.pdf"], "SEPM_UNIT_5": ["SEPM Unit 5 Notes.pdf"], "SEPM_PYQS": ["SEPM QB CAE 1.jpg", "SEPM QB CAE 2.pdf", "SEPM QB CAE 3.pdf"]}}};
 
 const ICONS = {
-  "AIKRR": {icon:"psychology", tint:"tertiary-container"},
-  "BCC": {icon:"forum", tint:"secondary"},
-  "CAO": {icon:"memory", tint:"primary-container"},
-  "CN": {icon:"lan", tint:"secondary"},
-  "DBMS": {icon:"database", tint:"primary-container"},
-  "DMGT": {icon:"hub", tint:"tertiary-container"},
-  "DSA": {icon:"data_object", tint:"secondary"},
-  "DWM": {icon:"insights", tint:"primary-container"},
-  "FLA": {icon:"functions", tint:"tertiary-container"},
-  "MLA": {icon:"smart_toy", tint:"secondary"},
-  "OOP(new)": {icon:"code", tint:"primary-container"},
-  "OS": {icon:"terminal", tint:"error"},
-  "QC(new)": {icon:"bolt", tint:"tertiary-container"},
-  "SEPM": {icon:"design_services", tint:"secondary"},
+  "AIKRR": {icon:"psychology", tint:"violet"},
+  "BCC": {icon:"forum", tint:"emerald"},
+  "CAO": {icon:"memory", tint:"sky"},
+  "CN": {icon:"lan", tint:"indigo"},
+  "DBMS": {icon:"database", tint:"cyan"},
+  "DMGT": {icon:"hub", tint:"fuchsia"},
+  "DSA": {icon:"data_object", tint:"blue"},
+  "DWM": {icon:"insights", tint:"teal"},
+  "FLA": {icon:"functions", tint:"purple"},
+  "MLA": {icon:"smart_toy", tint:"rose"},
+  "OOP(new)": {icon:"code", tint:"amber"},
+  "OS": {icon:"terminal", tint:"red"},
+  "QC(new)": {icon:"bolt", tint:"yellow"},
+  "SEPM": {icon:"design_services", tint:"lime"},
 };
 const FULL_NAMES = {
   "AIKRR": "AI, Knowledge Rep. & Reasoning",
@@ -319,10 +362,29 @@ const FULL_NAMES = {
   "SEPM": "Software Engineering & Project Mgmt.",
 };
 
-/* -------------------------------------------------------------------
-   Build a normalized model: { code, name, icon, tint, groups:[{label,type,files:[name]}], totalFiles }
-   type: 'unit' | 'pyq' | 'misc'
-   ------------------------------------------------------------------- */
+const TINT_STYLE = {
+  violet: 'bg-violet-400/20 text-violet-200 border-violet-300/30',
+  emerald: 'bg-emerald-400/20 text-emerald-200 border-emerald-300/30',
+  sky: 'bg-sky-400/20 text-sky-200 border-sky-300/30',
+  indigo: 'bg-indigo-400/20 text-indigo-200 border-indigo-300/30',
+  cyan: 'bg-cyan-400/20 text-cyan-100 border-cyan-300/30',
+  fuchsia: 'bg-fuchsia-400/20 text-fuchsia-200 border-fuchsia-300/30',
+  blue: 'bg-blue-400/20 text-blue-100 border-blue-300/30',
+  teal: 'bg-teal-400/20 text-teal-100 border-teal-300/30',
+  purple: 'bg-purple-400/20 text-purple-100 border-purple-300/30',
+  rose: 'bg-rose-400/20 text-rose-100 border-rose-300/30',
+  amber: 'bg-amber-400/20 text-amber-100 border-amber-300/30',
+  red: 'bg-red-400/20 text-red-100 border-red-300/30',
+  yellow: 'bg-yellow-300/20 text-yellow-100 border-yellow-300/30',
+  lime: 'bg-lime-400/20 text-lime-100 border-lime-300/30',
+};
+
+function rank(type){ return type === 'unit' ? 0 : (type === 'misc' ? 1 : 2); }
+function prettifyGroup(key, type){
+  if (type === 'pyq') return 'Previous Year Questions';
+  if (type === 'misc') return 'Other Files';
+  return key.replace(/_/g,' ').replace(/\s+/g,' ').trim();
+}
 function buildSubjects() {
   const subjects = [];
   for (const code of Object.keys(TREE.Files)) {
@@ -338,331 +400,418 @@ function buildSubjects() {
       else if (lower.includes('root_files')) type = 'misc';
       groups.push({ label: prettifyGroup(groupKey, type), rawKey: groupKey, type, files });
     }
-    // sort: units first (natural order as given), then misc, then pyq
-    groups.sort((a,b)=> rank(a.type) - rank(b.type));
-    const meta = ICONS[code] || {icon:"folder", tint:"secondary"};
-    subjects.push({
-      code, name: FULL_NAMES[code] || code, icon: meta.icon, tint: meta.tint,
-      groups, totalFiles
-    });
+    groups.sort((a, b) => rank(a.type) - rank(b.type));
+    const meta = ICONS[code] || { icon: 'folder', tint: 'sky' };
+    subjects.push({ code, name: FULL_NAMES[code] || code, icon: meta.icon, tint: meta.tint, groups, totalFiles });
   }
   return subjects;
 }
-function rank(t){ return t==='unit'?0:(t==='misc'?1:2); }
-function prettifyGroup(key, type){
-  if (type === 'pyq') return 'Previous Year Questions';
-  if (type === 'misc') return 'Other Files';
-  return key.replace(/_/g,' ').replace(/\s+/g,' ').trim();
-}
 
 const SUBJECTS = buildSubjects();
-const SUBJECT_MAP = Object.fromEntries(SUBJECTS.map(s=>[s.code,s]));
+const SUBJECT_MAP = Object.fromEntries(SUBJECTS.map(subject => [subject.code, subject]));
+const STATE = { view: 'home', currentSubject: null, chip: 'All' };
+let FAVORITES = []; // {code,file}
 
-/* Tint class helpers (Tailwind can't purge dynamic strings, so map explicitly) */
-const TINT_BG = {
-  "primary-container": "bg-primary-container/20 text-primary-container",
-  "secondary": "bg-secondary-container/20 text-secondary",
-  "tertiary-container": "bg-tertiary-container/20 text-tertiary-container",
-  "error": "bg-error-container/20 text-error",
-};
-const TINT_BORDER = {
-  "primary-container": "border-l-primary-container",
-  "secondary": "border-l-secondary",
-  "tertiary-container": "border-l-tertiary-fixed-dim",
-  "error": "border-l-error",
-};
+function escapeHtml(text) {
+  return String(text).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+}
+function escapeAttr(text) {
+  return escapeHtml(text).replace(/`/g, '&#96;');
+}
+function toToken(value) {
+  return encodeURIComponent(value);
+}
+function fromToken(value) {
+  return decodeURIComponent(value);
+}
+function favKey(code, file) { return `${code}::${file}`; }
+function isFav(code, file) { return FAVORITES.some(entry => favKey(entry.code, entry.file) === favKey(code, file)); }
 
-/* ===================================================================
-   FAVORITES (persisted in-memory only — no localStorage in this env)
-   =================================================================== */
-let FAVORITES = []; // {code, file}
-function favKey(code,file){ return code+'::'+file; }
-function isFav(code,file){ return FAVORITES.some(f=>favKey(f.code,f.file)===favKey(code,file)); }
-function toggleFav(code,file){
-  if (isFav(code,file)) FAVORITES = FAVORITES.filter(f=>favKey(f.code,f.file)!==favKey(code,file));
-  else FAVORITES.push({code,file});
-  renderFavorites();
-  if (STATE.view==='detail') renderDetail(STATE.currentSubject);
+function fileExt(name) {
+  const match = String(name).match(/\.([a-zA-Z0-9]+)$/);
+  return match ? match[1].toUpperCase() : 'FILE';
 }
 
-/* ===================================================================
-   ROUTER
-   =================================================================== */
-const STATE = { view:'home', currentSubject: null, chip: 'All Semesters' };
-
-function go(view, param){
+function go(view, subjectCode) {
   STATE.view = view;
-  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-  document.getElementById('view-'+view).classList.add('active');
-  document.querySelectorAll('nav [data-nav]').forEach(a=>{
-    a.classList.remove('text-primary-fixed-dim');
-    a.classList.add('text-on-surface-variant');
-  });
-  const navEl = document.querySelector(`nav [data-nav="${view}"]`) || document.querySelector('nav [data-nav="subjects"]');
-  if (view==='detail') {
-    document.querySelector('nav [data-nav="subjects"]').classList.add('text-primary-fixed-dim');
-    document.querySelector('nav [data-nav="subjects"]').classList.remove('text-on-surface-variant');
-  } else if (navEl) {
-    navEl.classList.add('text-primary-fixed-dim');
-    navEl.classList.remove('text-on-surface-variant');
-  }
+  if (view !== 'detail') STATE.currentSubject = null;
+  document.querySelectorAll('.view').forEach(section => section.classList.remove('active'));
+  const target = document.getElementById(`view-${view}`);
+  if (target) target.classList.add('active');
+  syncNav();
+  updateTopbar();
   closeSearch();
-  window.scrollTo({top:0, behavior:'instant'});
-
-  if (view === 'detail' && param) openDetail(param);
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  if (view === 'detail' && subjectCode) openDetail(subjectCode);
 }
 
-/* ===================================================================
-   RENDER: HOME
-   =================================================================== */
-function renderHome(){
-  const grid = document.getElementById('home-subject-grid');
-  grid.innerHTML = SUBJECTS.slice(0,4).map(s=>`
-    <a class="panel rounded-xl p-4 flex flex-col gap-4 ring-hover shadow-sm glow cursor-pointer" onclick="go('detail','${s.code}')">
-      <div class="w-10 h-10 rounded-lg ${TINT_BG[s.tint]} flex items-center justify-center">
-        <span class="material-symbols-outlined">${s.icon}</span>
-      </div>
-      <div>
-        <h3 class="font-body-md text-body-md text-on-surface font-semibold mb-1 line-clamp-1">${s.code}</h3>
-        <p class="font-label-sm text-label-sm text-on-surface-variant font-mono">${s.totalFiles} Docs • ${s.groups.length} Units</p>
-      </div>
-    </a>`).join('');
-
-  // Trending: pick 2 files with the most units referencing them (or just first 2 non-pyq files across subjects)
-  const trendPicks = [];
-  for (const s of SUBJECTS){
-    for (const g of s.groups){
-      if (g.type==='unit' && g.files.length){
-        trendPicks.push({subject:s, file:g.files[0], group:g});
-        break;
-      }
-    }
-    if (trendPicks.length>=2) break;
-  }
-  const trend = document.getElementById('home-trending');
-  trend.innerHTML = trendPicks.map((t,i)=>{
-    const ext = fileExt(t.file);
-    return `
-    <div class="panel rounded-xl p-4 flex items-start gap-4 transition-colors shadow-sm cursor-pointer ring-hover glow" onclick="openPdf('${t.subject.code}','${escapeAttr(t.file)}')">
-      <div class="shrink-0 w-12 h-16 bg-surface-container-highest rounded flex flex-col items-center justify-center relative overflow-hidden">
-        <span class="font-label-sm text-label-sm text-on-surface-variant z-10 font-bold uppercase">${ext}</span>
-        <div class="absolute bottom-0 w-full h-1/3 ${i===0?'bg-error/20':'bg-primary/20'}"></div>
-      </div>
-      <div class="flex-1 min-w-0">
-        <div class="flex justify-between items-start mb-1 gap-2">
-          <h3 class="font-body-md text-body-md text-on-surface font-semibold truncate">${escapeHtml(t.file.replace(/\.(pdf|docx|pptx|jpg)$/i,''))}</h3>
-          <span class="bg-secondary/10 text-secondary px-2 py-0.5 rounded font-label-sm text-label-sm shrink-0 font-mono">${t.subject.code}</span>
-        </div>
-        <p class="font-body-md text-[14px] text-on-surface-variant mb-2 truncate">${t.group.label} · ${t.subject.name}</p>
-        <div class="flex items-center gap-4 font-label-sm text-label-sm text-on-surface-variant">
-          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">visibility</span> ${(Math.random()*1000+300)|0}</span>
-          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">download</span> ${(Math.random()*600+100)|0}</span>
-          <span class="flex items-center gap-1 font-mono">tap to preview</span>
-        </div>
-      </div>
-    </div>`;
-  }).join('');
-
-  // Latest PYQs: pick from subjects that have a pyq group
-  const pyqSubjects = SUBJECTS.filter(s=>s.groups.some(g=>g.type==='pyq')).slice(0,2);
-  const pyqBox = document.getElementById('home-pyqs');
-  pyqBox.innerHTML = pyqSubjects.map((s,i)=>{
-    const g = s.groups.find(g=>g.type==='pyq');
-    const f = g.files[0];
-    return `
-    <a class="panel-soft rounded-xl p-4 flex items-center justify-between transition-colors border-l-4 ${i===0?'border-l-primary-container':'border-l-secondary'} shadow-sm group cursor-pointer ring-hover" onclick="openPdf('${s.code}','${escapeAttr(f)}')">
-      <div class="min-w-0">
-        <h3 class="font-body-md text-body-md text-on-surface font-semibold truncate group-hover:text-primary-container transition-colors">${s.code} — ${escapeHtml(f.replace(/\.(pdf|docx)$/i,''))}</h3>
-        <p class="font-label-sm text-label-sm text-on-surface-variant mt-1 font-mono">RTMNU • ${s.name}</p>
-      </div>
-      <span class="material-symbols-outlined text-on-surface-variant shrink-0 ml-2">download</span>
-    </a>`;
-  }).join('');
+function syncNav() {
+  const active = STATE.view === 'detail' ? 'subjects' : STATE.view;
+  document.querySelectorAll('[data-nav]').forEach(element => {
+    element.classList.toggle('active', element.getAttribute('data-nav') === active);
+  });
 }
 
-/* ===================================================================
-   RENDER: SUBJECTS INDEX
-   =================================================================== */
-function renderSubjects(){
-  const chipRow = document.getElementById('chip-row');
-  const chips = ['All Semesters', ...SUBJECTS.map(s=>s.code)];
-  // Keep it manageable — show "All Semesters" + a few real filters based on group count buckets
-  chipRow.innerHTML = `
-    <button class="chip snap-start shrink-0 px-4 py-1.5 rounded-full font-label-sm text-label-sm ${STATE.chip==='All Semesters'?'active':'bg-surface-container text-on-surface'}" onclick="setChip('All Semesters')">All Subjects</button>
-    <button class="chip snap-start shrink-0 px-4 py-1.5 rounded-full font-label-sm text-label-sm ${STATE.chip==='Large'?'active':'bg-surface-container text-on-surface'}" onclick="setChip('Large')">10+ Docs</button>
-    <button class="chip snap-start shrink-0 px-4 py-1.5 rounded-full font-label-sm text-label-sm ${STATE.chip==='PYQ'?'active':'bg-surface-container text-on-surface'}" onclick="setChip('PYQ')">Has PYQs</button>
-  `;
-
-  let list = SUBJECTS;
-  if (STATE.chip==='Large') list = SUBJECTS.filter(s=>s.totalFiles>=10);
-  if (STATE.chip==='PYQ') list = SUBJECTS.filter(s=>s.groups.some(g=>g.type==='pyq'));
-
-  const container = document.getElementById('subject-groups');
-  container.innerHTML = `
-    <div class="flex flex-col gap-3">
-      <h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
-        <span class="material-symbols-outlined text-primary text-[20px]">school</span> All Subjects
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        ${list.map(s=>subjectCard(s)).join('')}
-      </div>
-    </div>`;
-}
-
-function subjectCard(s){
-  const unitCount = s.groups.filter(g=>g.type==='unit').length;
-  const pyqGroup = s.groups.find(g=>g.type==='pyq');
-  const gradientFrom = s.tint==='error' ? 'from-error/10' : s.tint==='secondary' ? 'from-secondary/10' : s.tint==='tertiary-container' ? 'from-tertiary-fixed-dim/10' : 'from-primary/10';
-  const labelColor = s.tint==='error' ? 'text-error' : s.tint==='secondary' ? 'text-secondary' : s.tint==='tertiary-container' ? 'text-tertiary-fixed-dim' : 'text-primary';
-  return `
-    <div class="panel rounded-xl p-4 flex flex-col gap-3 shadow-md relative overflow-hidden group cursor-pointer glow ring-hover" onclick="go('detail','${s.code}')">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br ${gradientFrom} to-transparent rounded-bl-full pointer-events-none"></div>
-      <div class="flex justify-between items-start">
-        <div class="flex flex-col">
-          <span class="font-label-sm text-label-sm ${labelColor} mb-1">${s.code}</span>
-          <h3 class="font-headline-md text-headline-md text-on-surface text-[18px]">${s.name}</h3>
-        </div>
-        <span class="material-symbols-outlined text-on-surface-variant">arrow_forward_ios</span>
-      </div>
-      <div class="flex flex-wrap gap-2 mt-2">
-        <span class="inline-flex items-center gap-1 bg-surface-container-high rounded-md px-2 py-1 font-label-sm text-label-sm text-on-surface">
-          <span class="material-symbols-outlined text-[14px]">description</span> Units (${unitCount})
-        </span>
-        ${pyqGroup ? `<span class="inline-flex items-center gap-1 bg-surface-container-high rounded-md px-2 py-1 font-label-sm text-label-sm text-on-surface">
-          <span class="material-symbols-outlined text-[14px]">quiz</span> PYQs (${pyqGroup.files.length})
-        </span>` : ''}
-        <span class="inline-flex items-center gap-1 bg-surface-container-high rounded-md px-2 py-1 font-label-sm text-label-sm text-on-surface">
-          <span class="material-symbols-outlined text-[14px]">folder_copy</span> ${s.totalFiles} files
-        </span>
-      </div>
-    </div>`;
-}
-
-function setChip(c){ STATE.chip = c; renderSubjects(); }
-
-/* ===================================================================
-   RENDER: NOTE DETAIL
-   =================================================================== */
-function openDetail(code){
-  STATE.currentSubject = code;
-  renderDetail(code);
-}
-function renderDetail(code){
-  const s = SUBJECT_MAP[code];
-  if (!s) return;
-  const header = document.getElementById('detail-header');
-  header.innerHTML = `
-    <div class="flex items-center gap-2 text-primary">
-      <span class="material-symbols-outlined text-[20px]">folder_open</span>
-      <span class="font-label-sm uppercase tracking-wider text-on-surface-variant">Computer Science / ${s.code}</span>
-    </div>
-    <div>
-      <h2 class="font-headline-lg-mobile text-on-surface mb-2">${s.name}</h2>
-      <p class="font-body-md text-on-surface-variant">Notes, previous year questions, and reference material for ${s.code}, organized by unit.</p>
-    </div>
-    <div class="flex gap-4 mt-2">
-      <div class="flex flex-col panel-soft rounded-lg p-3 flex-1">
-        <span class="font-label-sm text-on-surface-variant mb-1">Total Files</span>
-        <span class="font-headline-md text-on-surface">${s.totalFiles}</span>
-      </div>
-      <div class="flex flex-col panel-soft rounded-lg p-3 flex-1">
-        <span class="font-label-sm text-on-surface-variant mb-1">Units</span>
-        <span class="font-body-md text-on-surface">${s.groups.filter(g=>g.type==='unit').length} sections</span>
-      </div>
-    </div>`;
-
-  const sections = document.getElementById('detail-sections');
-  sections.innerHTML = s.groups.map(g=>{
-    const isPyq = g.type==='pyq';
-    const badgeColor = isPyq ? 'bg-primary/10 text-primary' : 'bg-secondary/10 text-secondary';
-    return `
-    <section class="flex flex-col gap-4">
-      <div class="flex items-center justify-between">
-        <h3 class="font-headline-md text-on-surface text-[20px]">${g.label}</h3>
-        <span class="${badgeColor} font-label-sm px-2 py-1 rounded">${g.files.length} file${g.files.length!==1?'s':''}</span>
-      </div>
-      <div class="flex flex-col gap-3">
-        ${g.files.map(f=>fileRow(s, f, isPyq)).join('')}
-      </div>
-    </section>`;
-  }).join('');
-}
-
-function fileRow(s, filename, isPyq){
-  const ext = fileExt(filename);
-  const iconMap = { PDF: {icon:'picture_as_pdf', bg:'bg-error/10', color:'text-error'},
-                     DOCX: {icon:'description', bg:'bg-secondary/10', color:'text-secondary'},
-                     PPTX: {icon:'slideshow', bg:'bg-primary/10', color:'text-primary'},
-                     JPG: {icon:'image', bg:'bg-tertiary-container/10', color:'text-tertiary-fixed-dim'} };
-  const meta = iconMap[ext] || {icon:'draft', bg:'bg-surface-container-highest', color:'text-on-surface-variant'};
-  const fav = isFav(s.code, filename);
-  return `
-    <div class="panel-soft rounded-xl p-4 flex flex-col gap-3 hover:border-primary/50 transition-colors ring-hover">
-      <div class="flex items-start justify-between gap-3">
-        <div class="flex items-start gap-3 min-w-0 cursor-pointer" onclick="openPdf('${s.code}','${escapeAttr(filename)}')">
-          <div class="w-10 h-10 rounded ${meta.bg} ${meta.color} flex items-center justify-center shrink-0">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">${meta.icon}</span>
-          </div>
-          <div class="flex flex-col min-w-0">
-            <span class="font-body-md text-on-surface font-semibold truncate">${escapeHtml(filename)}</span>
-            <span class="font-label-sm text-on-surface-variant">${ext} • tap to preview</span>
-          </div>
-        </div>
-        <div class="flex items-center gap-1 shrink-0">
-          <button onclick="toggleFav('${s.code}','${escapeAttr(filename)}')" class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors ${fav?'text-primary-container':'text-on-surface'}">
-            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' ${fav?1:0};">grade</span>
-          </button>
-          <button onclick="openPdf('${s.code}','${escapeAttr(filename)}')" class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
-            <span class="material-symbols-outlined text-[18px]">visibility</span>
-          </button>
-        </div>
-      </div>
-    </div>`;
-}
-
-/* ===================================================================
-   RENDER: FAVORITES
-   =================================================================== */
-function renderFavorites(){
-  const list = document.getElementById('favorites-list');
-  const empty = document.getElementById('favorites-empty');
-  if (!FAVORITES.length){
-    list.innerHTML = '';
-    empty.classList.remove('hidden');
+function updateTopbar() {
+  const title = document.getElementById('topbar-title');
+  const subtitle = document.getElementById('topbar-subtitle');
+  if (STATE.view === 'detail' && STATE.currentSubject) {
+    const subject = SUBJECT_MAP[STATE.currentSubject];
+    title.textContent = subject ? subject.name : 'Subject Details';
+    subtitle.textContent = subject ? subject.code : 'Subject Details';
     return;
   }
-  empty.classList.add('hidden');
-  list.innerHTML = FAVORITES.map(f=>{
-    const s = SUBJECT_MAP[f.code];
-    return fileRow(s, f.file, false);
-  }).join('');
+  const labels = {
+    home: ['College Notes Index', 'Welcome back'],
+    subjects: ['Subject Explorer', `${SUBJECTS.length} active subjects`],
+    favorites: ['Your Favorites', `${FAVORITES.length} saved files`],
+    profile: ['Support & Contact', 'Need help or want to contribute?'],
+  };
+  const [nextTitle, nextSubtitle] = labels[STATE.view] || labels.home;
+  title.textContent = nextTitle;
+  subtitle.textContent = nextSubtitle;
 }
 
-/* ===================================================================
-   PDF VIEWER
-   =================================================================== */
-function pdfPathCandidates(code, filename){
-  const subject = TREE.Files?.[code] || {};
-  const candidates = [];
+function renderHome() {
+  const totalFiles = SUBJECTS.reduce((sum, subject) => sum + subject.totalFiles, 0);
+  const pyqSubjects = SUBJECTS.filter(subject => subject.groups.some(group => group.type === 'pyq'));
+  const trending = SUBJECTS.map(subject => {
+    const firstUnit = subject.groups.find(group => group.type === 'unit' && group.files.length);
+    return firstUnit ? { subject, group: firstUnit, file: firstUnit.files[0] } : null;
+  }).filter(Boolean).slice(0, 4);
 
-  for (const [groupKey, files] of Object.entries(subject)) {
-    if (!files.includes(filename)) continue;
-    if (groupKey.toLowerCase().includes('root_files')) {
-      candidates.push(`Files/${code}/${filename}`);
-    } else {
-      candidates.push(`Files/${code}/${groupKey}/${filename}`);
-    }
+  document.getElementById('view-home').innerHTML = `
+    <div class="space-y-6">
+      <section class="card p-5 sm:p-7">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <div>
+            <p class="text-xs uppercase tracking-[0.22em] text-cyan-200/80 mb-2">Academic workspace</p>
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-50 leading-tight">Find notes, PYQs, and study files in seconds.</h1>
+            <p class="text-slate-300 mt-3 max-w-2xl">A focused dashboard for G.H. Raisoni students with organized subjects, quick previews, and one-tap favorites.</p>
+          </div>
+          <div class="flex gap-3">
+            <button class="h-11 px-4 rounded-xl bg-cyan-400/20 border border-cyan-300/40 text-cyan-100 font-semibold" data-route="subjects">Explore Subjects</button>
+            <button class="h-11 px-4 rounded-xl bg-slate-800/90 border border-slate-600/50 text-slate-100 font-semibold" data-route="favorites">Open Favorites</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6">
+          ${statCard('menu_book', 'Subjects', SUBJECTS.length)}
+          ${statCard('description', 'Files Indexed', totalFiles)}
+          ${statCard('quiz', 'PYQ Subjects', pyqSubjects.length)}
+          ${statCard('grade', 'Saved', FAVORITES.length)}
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 xl:grid-cols-5 gap-4">
+        <div class="xl:col-span-3 card-soft p-4 sm:p-5">
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <h2 class="text-lg font-semibold text-slate-100">Featured Subjects</h2>
+            <button class="text-sm text-cyan-200" data-route="subjects">View all</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            ${SUBJECTS.slice(0, 4).map(subjectPreviewCard).join('')}
+          </div>
+        </div>
+        <div class="xl:col-span-2 card-soft p-4 sm:p-5">
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <h2 class="text-lg font-semibold text-slate-100">Recent PYQs</h2>
+          </div>
+          <div class="space-y-3">
+            ${pyqSubjects.slice(0, 4).map(pyqPreviewCard).join('') || `<p class="text-sm text-slate-400">No PYQ files available yet.</p>`}
+          </div>
+        </div>
+      </section>
+
+      <section class="card-soft p-4 sm:p-5">
+        <h2 class="text-lg font-semibold text-slate-100 mb-4">Trending Notes</h2>
+        <div class="space-y-3">
+          ${trending.map((entry, index) => trendingRow(entry, index)).join('') || `<p class="text-sm text-slate-400">No notes found.</p>`}
+        </div>
+      </section>
+    </div>`;
+}
+
+function statCard(icon, label, value) {
+  return `<article class="card-soft p-3.5">
+    <div class="flex items-center justify-between">
+      <span class="text-sm text-slate-300">${escapeHtml(label)}</span>
+      <span class="material-symbols-outlined text-cyan-200 text-[20px]">${icon}</span>
+    </div>
+    <p class="text-2xl font-bold text-slate-50 mt-2 mono">${escapeHtml(String(value))}</p>
+  </article>`;
+}
+
+function subjectPreviewCard(subject) {
+  const tint = TINT_STYLE[subject.tint] || TINT_STYLE.sky;
+  return `<button class="card card-hover p-4 text-left" data-open-subject="${escapeAttr(subject.code)}">
+    <div class="flex items-start justify-between gap-3">
+      <div class="w-10 h-10 rounded-xl border ${tint} flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined">${subject.icon}</span>
+      </div>
+      <span class="text-xs text-slate-400 mono">${subject.totalFiles} files</span>
+    </div>
+    <h3 class="font-semibold text-slate-100 mt-3">${escapeHtml(subject.code)}</h3>
+    <p class="text-sm text-slate-300 mt-1 line-clamp-2">${escapeHtml(subject.name)}</p>
+  </button>`;
+}
+
+function pyqPreviewCard(subject) {
+  const pyqGroup = subject.groups.find(group => group.type === 'pyq');
+  if (!pyqGroup || !pyqGroup.files.length) return '';
+  const file = pyqGroup.files[0];
+  return `<button class="card-hover card-soft w-full p-3 text-left" data-open-file="1" data-code="${escapeAttr(subject.code)}" data-file="${escapeAttr(toToken(file))}">
+    <p class="text-sm text-slate-200 font-medium truncate">${escapeHtml(file)}</p>
+    <p class="text-xs text-slate-400 mt-1">${escapeHtml(subject.code)} · ${escapeHtml(pyqGroup.label)}</p>
+  </button>`;
+}
+
+function trendingRow(entry, index) {
+  const ext = fileExt(entry.file);
+  const count = 180 + ((index + 1) * 73);
+  return `<div class="card-hover card p-4 flex gap-3 items-start">
+    <div class="w-12 h-14 rounded-lg bg-slate-800 border border-slate-600/50 flex items-center justify-center text-sm font-bold mono">${escapeHtml(ext)}</div>
+    <div class="min-w-0 flex-1">
+      <button class="text-left w-full" data-open-file="1" data-code="${escapeAttr(entry.subject.code)}" data-file="${escapeAttr(toToken(entry.file))}">
+        <p class="font-semibold text-slate-100 truncate">${escapeHtml(entry.file)}</p>
+        <p class="text-sm text-slate-400 truncate">${escapeHtml(entry.subject.code)} · ${escapeHtml(entry.group.label)}</p>
+      </button>
+      <div class="text-xs text-slate-500 mt-2 flex gap-3"><span>${count} views</span><span>tap to preview</span></div>
+    </div>
+  </div>`;
+}
+
+function renderSubjects() {
+  let list = SUBJECTS;
+  if (STATE.chip === 'Large') list = SUBJECTS.filter(subject => subject.totalFiles >= 10);
+  if (STATE.chip === 'PYQ') list = SUBJECTS.filter(subject => subject.groups.some(group => group.type === 'pyq'));
+
+  document.getElementById('view-subjects').innerHTML = `
+    <div class="space-y-6">
+      <section class="card p-5 sm:p-6">
+        <h1 class="text-2xl sm:text-3xl font-bold text-slate-50">Subject Explorer</h1>
+        <p class="text-slate-300 mt-2 max-w-2xl">Browse all subjects with grouped notes, practical files, and previous year questions.</p>
+        <div class="flex gap-2 overflow-x-auto mt-4 pb-1">
+          ${filterChip('All', 'All Subjects')}
+          ${filterChip('Large', '10+ Docs')}
+          ${filterChip('PYQ', 'Has PYQs')}
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4">
+        ${list.map(subjectIndexCard).join('') || `<p class="text-slate-400">No subjects found for this filter.</p>`}
+      </section>
+    </div>`;
+}
+
+function filterChip(value, label) {
+  const active = STATE.chip === value ? 'active' : '';
+  return `<button class="chip ${active}" data-chip="${value}">${escapeHtml(label)}</button>`;
+}
+
+function subjectIndexCard(subject) {
+  const unitCount = subject.groups.filter(group => group.type === 'unit').length;
+  const pyqCount = subject.groups.find(group => group.type === 'pyq')?.files.length || 0;
+  const tint = TINT_STYLE[subject.tint] || TINT_STYLE.sky;
+  return `<article class="card card-hover p-5">
+    <div class="flex items-start justify-between gap-3">
+      <div class="w-11 h-11 rounded-xl border ${tint} flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined">${subject.icon}</span>
+      </div>
+      <span class="text-xs mono text-slate-400">${subject.totalFiles} files</span>
+    </div>
+    <p class="text-sm text-slate-400 mt-3">${escapeHtml(subject.code)}</p>
+    <h3 class="text-lg font-semibold text-slate-100 mt-0.5 line-clamp-2">${escapeHtml(subject.name)}</h3>
+    <div class="flex flex-wrap gap-2 mt-4 text-xs text-slate-200">
+      <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-600/50">${unitCount} sections</span>
+      <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-600/50">${pyqCount} PYQs</span>
+    </div>
+    <button class="mt-4 h-10 px-4 rounded-xl bg-cyan-400/20 border border-cyan-300/40 text-cyan-100 text-sm font-semibold" data-open-subject="${escapeAttr(subject.code)}">Open Workspace</button>
+  </article>`;
+}
+
+function openDetail(code) {
+  STATE.currentSubject = code;
+  renderDetail(code);
+  updateTopbar();
+}
+
+function renderDetail(code) {
+  const subject = SUBJECT_MAP[code];
+  if (!subject) return;
+  const unitCount = subject.groups.filter(group => group.type === 'unit').length;
+  const pyqFiles = subject.groups.filter(group => group.type === 'pyq').reduce((sum, group) => sum + group.files.length, 0);
+
+  document.getElementById('view-detail').innerHTML = `
+    <div class="space-y-6">
+      <section class="card p-5 sm:p-6">
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+          <button class="h-10 px-3 rounded-xl bg-slate-800 border border-slate-600/50 text-slate-100" data-route="subjects">← Back to subjects</button>
+          <span class="mono text-xs text-slate-400">${escapeHtml(subject.code)}</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-bold text-slate-50 mt-4">${escapeHtml(subject.name)}</h1>
+        <p class="text-slate-300 mt-2 max-w-3xl">Organized document workspace for notes, unit files, and past-year question banks.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-5">
+          ${statCard('description', 'Total Files', subject.totalFiles)}
+          ${statCard('menu_book', 'Sections', unitCount)}
+          ${statCard('quiz', 'PYQ Files', pyqFiles)}
+        </div>
+      </section>
+
+      <section class="space-y-5">
+        ${subject.groups.map(groupSection.bind(null, subject)).join('')}
+      </section>
+    </div>`;
+}
+
+function groupSection(subject, group) {
+  const isPyq = group.type === 'pyq';
+  const badge = isPyq ? 'bg-cyan-400/20 text-cyan-100 border-cyan-300/35' : 'bg-slate-800 text-slate-200 border-slate-500/45';
+  return `<article class="card-soft p-4 sm:p-5">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+      <h3 class="text-lg font-semibold text-slate-100">${escapeHtml(group.label)}</h3>
+      <span class="text-xs px-2.5 py-1 rounded-full border ${badge}">${group.files.length} file${group.files.length !== 1 ? 's' : ''}</span>
+    </div>
+    <div class="space-y-2.5">
+      ${group.files.map(file => fileRow(subject.code, file, isPyq)).join('')}
+    </div>
+  </article>`;
+}
+
+function fileRow(code, filename, isPyq) {
+  const ext = fileExt(filename);
+  const iconMap = {
+    PDF: { icon: 'picture_as_pdf', color: 'text-red-200 bg-red-400/20 border-red-300/35' },
+    DOCX: { icon: 'description', color: 'text-sky-100 bg-sky-400/20 border-sky-300/35' },
+    PPTX: { icon: 'slideshow', color: 'text-indigo-100 bg-indigo-400/20 border-indigo-300/35' },
+    JPG: { icon: 'image', color: 'text-purple-100 bg-purple-400/20 border-purple-300/35' },
+  };
+  const meta = iconMap[ext] || { icon: 'draft', color: 'text-slate-200 bg-slate-600/30 border-slate-500/40' };
+  const fav = isFav(code, filename);
+  const pyqBadge = isPyq ? '<span class="text-[10px] uppercase tracking-wider text-cyan-200">PYQ</span>' : '';
+  return `<div class="card card-hover p-3.5 sm:p-4">
+    <div class="flex items-start justify-between gap-3">
+      <button class="flex items-start gap-3 min-w-0 text-left" data-open-file="1" data-code="${escapeAttr(code)}" data-file="${escapeAttr(toToken(filename))}">
+        <span class="w-10 h-10 rounded-lg border ${meta.color} flex items-center justify-center shrink-0"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">${meta.icon}</span></span>
+        <span class="min-w-0">
+          <span class="block text-slate-100 font-medium truncate">${escapeHtml(filename)}</span>
+          <span class="block text-xs text-slate-400 mt-0.5">${escapeHtml(ext)} · tap to open ${pyqBadge}</span>
+        </span>
+      </button>
+      <div class="flex gap-2 shrink-0">
+        <button class="w-9 h-9 rounded-lg border border-slate-600/50 bg-slate-800 text-slate-100" data-toggle-fav="1" data-code="${escapeAttr(code)}" data-file="${escapeAttr(toToken(filename))}" aria-label="Toggle favorite">
+          <span class="material-symbols-outlined text-[18px]" style="font-variation-settings:'FILL' ${fav ? 1 : 0}">${fav ? 'star' : 'grade'}</span>
+        </button>
+        <button class="w-9 h-9 rounded-lg border border-slate-600/50 bg-slate-800 text-slate-100" data-open-file="1" data-code="${escapeAttr(code)}" data-file="${escapeAttr(toToken(filename))}" aria-label="Open file">
+          <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+        </button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderFavorites() {
+  const body = document.getElementById('view-favorites');
+  if (!FAVORITES.length) {
+    body.innerHTML = `
+      <section class="card p-6 text-center">
+        <div class="w-14 h-14 rounded-2xl bg-slate-800 border border-slate-600/50 mx-auto flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl text-cyan-200">grade</span>
+        </div>
+        <h1 class="text-2xl font-semibold text-slate-50 mt-4">No favorites yet</h1>
+        <p class="text-slate-300 mt-2">Star any file from a subject workspace to see it here.</p>
+        <button class="mt-5 h-11 px-4 rounded-xl bg-cyan-400/20 border border-cyan-300/40 text-cyan-100 font-semibold" data-route="subjects">Browse Subjects</button>
+      </section>`;
+    return;
   }
 
+  body.innerHTML = `
+    <section class="space-y-4">
+      <div class="card p-5 sm:p-6">
+        <h1 class="text-2xl sm:text-3xl font-bold text-slate-50">Saved Favorites</h1>
+        <p class="text-slate-300 mt-2">Your starred files for quick revision.</p>
+      </div>
+      <div class="space-y-3">
+        ${FAVORITES.map(entry => fileRow(entry.code, entry.file, false)).join('')}
+      </div>
+    </section>`;
+}
+
+function renderProfile() {
+  document.getElementById('view-profile').innerHTML = `
+    <div class="grid grid-cols-1 xl:grid-cols-5 gap-4">
+      <section class="xl:col-span-3 card p-5 sm:p-6">
+        <h1 class="text-2xl sm:text-3xl font-bold text-slate-50">Support & Contact</h1>
+        <p class="text-slate-300 mt-2">Share suggestions, report issues, or request missing notes.</p>
+        <form id="contact-form" class="space-y-3 mt-5">
+          <div>
+            <label class="text-sm text-slate-300" for="contact-name">Name (optional)</label>
+            <input id="contact-name" class="w-full h-11 mt-1 rounded-xl border border-slate-600/50 bg-slate-900/70 px-3 text-slate-100" type="text" placeholder="Your name"/>
+          </div>
+          <div>
+            <label class="text-sm text-slate-300" for="contact-email">Email (optional)</label>
+            <input id="contact-email" class="w-full h-11 mt-1 rounded-xl border border-slate-600/50 bg-slate-900/70 px-3 text-slate-100" type="email" placeholder="you@example.com"/>
+          </div>
+          <div>
+            <label class="text-sm text-slate-300" for="contact-message">Message</label>
+            <textarea id="contact-message" class="w-full min-h-[120px] mt-1 rounded-xl border border-slate-600/50 bg-slate-900/70 px-3 py-2 text-slate-100" placeholder="How can we help?"></textarea>
+          </div>
+          <button class="h-11 px-4 rounded-xl bg-cyan-400/20 border border-cyan-300/40 text-cyan-100 font-semibold" type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <aside class="xl:col-span-2 space-y-4">
+        <article class="card-soft p-4">
+          <h2 class="text-lg font-semibold text-slate-100">Community</h2>
+          <p class="text-sm text-slate-300 mt-2">Contribute files, verify broken links, or suggest UX improvements to make CNI better for everyone.</p>
+          <div class="mt-3 text-sm text-slate-400 space-y-1">
+            <p>• Contribute on GitHub</p>
+            <p>• Report missing content</p>
+            <p>• Share feedback with classmates</p>
+          </div>
+        </article>
+        <article class="card-soft p-4">
+          <h2 class="text-lg font-semibold text-slate-100">Student feedback</h2>
+          <p class="text-sm text-cyan-200 mt-2">★★★★★ 4.9 average rating</p>
+          <p class="text-sm text-slate-300 mt-3 italic">“The new dashboard makes revision quick. Search and favorites save a lot of time before exams.”</p>
+        </article>
+      </aside>
+    </div>`;
+
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', event => {
+      event.preventDefault();
+      sendMessage();
+    });
+  }
+}
+
+function toggleFav(code, file) {
+  if (isFav(code, file)) {
+    FAVORITES = FAVORITES.filter(entry => favKey(entry.code, entry.file) !== favKey(code, file));
+  } else {
+    FAVORITES.push({ code, file });
+  }
+  renderHome();
+  renderFavorites();
+  if (STATE.view === 'subjects') renderSubjects();
+  if (STATE.view === 'detail' && STATE.currentSubject) renderDetail(STATE.currentSubject);
+  updateTopbar();
+}
+
+function pdfPathCandidates(code, filename) {
+  const subject = TREE.Files?.[code] || {};
+  const candidates = [];
+  for (const [groupKey, files] of Object.entries(subject)) {
+    if (!files.includes(filename)) continue;
+    if (groupKey.toLowerCase().includes('root_files')) candidates.push(`Files/${code}/${filename}`);
+    else candidates.push(`Files/${code}/${groupKey}/${filename}`);
+  }
   candidates.push(`Files/${code}/${filename}`);
   return [...new Set(candidates)];
 }
 
-function pdfPathFor(code, filename){
-  return pdfPathCandidates(code, filename)[0];
-}
-
-async function resolvePdfPath(code, filename){
+async function resolvePdfPath(code, filename) {
   const candidates = pdfPathCandidates(code, filename);
   for (const rawPath of candidates) {
     const path = encodeURI(rawPath);
@@ -670,122 +819,124 @@ async function resolvePdfPath(code, filename){
       const response = await fetch(path, { method: 'HEAD' });
       if (response.ok) return path;
     } catch (error) {
-      // Try the next candidate.
+      // try next candidate
     }
   }
   return encodeURI(candidates[0]);
 }
-function openPdf(code, filename){
-  const popup = window.open('about:blank', '_blank');
-  resolvePdfPath(code, filename).then(path=>{
-    // Open the file in a new browser tab/window instead of embedding inline.
-    if (popup) {
-      popup.location.href = path;
-    } else {
-      // If popup blocked, navigate in the same tab as a fallback.
-      window.location.href = path;
-    }
-  });
-}
-function embedPdf(path){
-  document.getElementById('pdf-body').innerHTML =
-    `<iframe src="${path}#toolbar=1" class="w-full h-full border-0" title="PDF preview"></iframe>`;
-}
-function showFallback(code, filename){
-  const demo = 'Files/_sample-preview.pdf';
-  document.getElementById('pdf-body').innerHTML = `
-    <div class="w-full h-full flex flex-col items-center justify-center text-center gap-4 px-8">
-      <div class="w-16 h-16 rounded-2xl bg-error/10 text-error flex items-center justify-center">
-        <span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
-      </div>
-      <div>
-        <p class="font-body-md text-on-surface font-semibold mb-1">File not found locally</p>
-        <p class="font-body-md text-[14px] text-on-surface-variant max-w-xs mx-auto">
-          Drop your own copy at <code class="text-primary-container">${escapeHtml(pdfPathFor(code, filename))}</code> and it'll preview here automatically.
-        </p>
-      </div>
-      <button onclick="embedPdf('${demo}'); document.getElementById('pdf-title').textContent='Sample preview — DSA Unit 1.pdf';" class="mt-1 h-10 px-4 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center gap-2">
-        <span class="material-symbols-outlined text-[16px]">visibility</span> View a sample preview instead
-      </button>
-    </div>`;
-}
-function closePdf(){
-  document.getElementById('pdf-modal').classList.add('closed');
-  document.body.style.overflow = '';
-  setTimeout(()=>{ document.getElementById('pdf-body').innerHTML=''; }, 200);
-}
-document.getElementById('pdf-modal').addEventListener('click', e=>{
-  if (e.target.id === 'pdf-modal') closePdf();
-});
 
-/* ===================================================================
-   SEARCH
-   =================================================================== */
-function closeSearch(){
-  document.getElementById('search-overlay').classList.add('hidden');
-  document.getElementById('search-input').value = '';
+async function openPdf(code, filename) {
+  const popup = window.open('about:blank', '_blank', 'noopener');
+  const path = await resolvePdfPath(code, filename);
+  if (popup) popup.location.href = path;
+  else window.location.href = path;
 }
-function runSearch(q){
+
+function closeSearch() {
+  const overlay = document.getElementById('search-overlay');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function runSearch(queryText) {
   const overlay = document.getElementById('search-overlay');
   const results = document.getElementById('search-results');
-  if (!q.trim()){ overlay.classList.add('hidden'); return; }
-  overlay.classList.remove('hidden');
-  const query = q.toLowerCase();
+  const query = queryText.trim().toLowerCase();
+  if (!query) {
+    closeSearch();
+    results.innerHTML = '';
+    return;
+  }
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
   const hits = [];
-  for (const s of SUBJECTS){
-    if (s.code.toLowerCase().includes(query) || s.name.toLowerCase().includes(query)){
-      hits.push({type:'subject', subject:s});
+  for (const subject of SUBJECTS) {
+    if (subject.code.toLowerCase().includes(query) || subject.name.toLowerCase().includes(query)) {
+      hits.push({ type: 'subject', subject });
     }
-    for (const g of s.groups){
-      for (const f of g.files){
-        if (f.toLowerCase().includes(query)){
-          hits.push({type:'file', subject:s, group:g, file:f});
-        }
+    for (const group of subject.groups) {
+      for (const file of group.files) {
+        if (file.toLowerCase().includes(query)) hits.push({ type: 'file', subject, group, file });
       }
     }
   }
-  if (!hits.length){
-    results.innerHTML = `<p class="font-body-md text-on-surface-variant text-center py-8">No matches for "${escapeHtml(q)}"</p>`;
+
+  if (!hits.length) {
+    results.innerHTML = `<div class="card-soft p-4 text-slate-300">No matches for <span class="mono">${escapeHtml(queryText)}</span>.</div>`;
     return;
   }
-  results.innerHTML = hits.slice(0,40).map(h=>{
-    if (h.type==='subject'){
-      return `<div class="panel-soft rounded-xl p-4 flex items-center gap-3 cursor-pointer ring-hover" onclick="go('detail','${h.subject.code}')">
-        <div class="w-9 h-9 rounded-lg ${TINT_BG[h.subject.tint]} flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[18px]">${h.subject.icon}</span></div>
-        <div class="min-w-0"><p class="font-body-md text-on-surface font-semibold truncate">${h.subject.code} — ${h.subject.name}</p><p class="font-label-sm text-label-sm text-on-surface-variant">Subject</p></div>
-      </div>`;
+
+  results.innerHTML = hits.slice(0, 60).map(hit => {
+    if (hit.type === 'subject') {
+      const tint = TINT_STYLE[hit.subject.tint] || TINT_STYLE.sky;
+      return `<button class="card-soft card-hover w-full p-4 text-left flex items-center gap-3" data-open-subject="${escapeAttr(hit.subject.code)}">
+        <span class="w-10 h-10 rounded-xl border ${tint} flex items-center justify-center shrink-0"><span class="material-symbols-outlined">${hit.subject.icon}</span></span>
+        <span class="min-w-0"><span class="block text-slate-100 font-medium truncate">${escapeHtml(hit.subject.code)} · ${escapeHtml(hit.subject.name)}</span><span class="block text-xs text-slate-400 mt-0.5">Subject</span></span>
+      </button>`;
     }
-    return `<div class="panel-soft rounded-xl p-4 flex items-center gap-3 cursor-pointer ring-hover" onclick="openPdf('${h.subject.code}','${escapeAttr(h.file)}')">
-      <div class="w-9 h-9 rounded-lg bg-error/10 text-error flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[18px]">picture_as_pdf</span></div>
-      <div class="min-w-0"><p class="font-body-md text-on-surface font-semibold truncate">${escapeHtml(h.file)}</p><p class="font-label-sm text-label-sm text-on-surface-variant">${h.subject.code} · ${h.group.label}</p></div>
-    </div>`;
+    return `<button class="card-soft card-hover w-full p-4 text-left flex items-center gap-3" data-open-file="1" data-code="${escapeAttr(hit.subject.code)}" data-file="${escapeAttr(toToken(hit.file))}">
+      <span class="w-10 h-10 rounded-xl border border-red-300/35 bg-red-400/20 text-red-100 flex items-center justify-center shrink-0"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">picture_as_pdf</span></span>
+      <span class="min-w-0"><span class="block text-slate-100 font-medium truncate">${escapeHtml(hit.file)}</span><span class="block text-xs text-slate-400 mt-0.5 truncate">${escapeHtml(hit.subject.code)} · ${escapeHtml(hit.group.label)}</span></span>
+    </button>`;
   }).join('');
 }
-document.getElementById('search-input').addEventListener('input', e=>runSearch(e.target.value));
 
-/* ===================================================================
-   MISC HELPERS
-   =================================================================== */
-function fileExt(name){
-  const m = name.match(/\.([a-zA-Z0-9]+)$/);
-  return m ? m[1].toUpperCase() : 'FILE';
-}
-function escapeHtml(s){
-  return s.replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-}
-function escapeAttr(s){
-  return s.replace(/'/g, "\\'");
-}
-function sendMessage(){
+function sendMessage() {
   alert('Thanks! This demo form doesn\'t send anywhere yet — wire it up to your backend or a form service like Formspree.');
 }
 
-/* ===================================================================
-   INIT
-   =================================================================== */
+document.addEventListener('click', event => {
+  const route = event.target.closest('[data-route]');
+  if (route) {
+    go(route.getAttribute('data-route'));
+    return;
+  }
+
+  const chip = event.target.closest('[data-chip]');
+  if (chip) {
+    STATE.chip = chip.getAttribute('data-chip');
+    renderSubjects();
+    return;
+  }
+
+  const openSubjectButton = event.target.closest('[data-open-subject]');
+  if (openSubjectButton) {
+    const code = openSubjectButton.getAttribute('data-open-subject');
+    go('detail', code);
+    return;
+  }
+
+  const fileButton = event.target.closest('[data-open-file]');
+  if (fileButton) {
+    const code = fileButton.getAttribute('data-code');
+    const file = fromToken(fileButton.getAttribute('data-file'));
+    openPdf(code, file);
+    return;
+  }
+
+  const favButton = event.target.closest('[data-toggle-fav]');
+  if (favButton) {
+    const code = favButton.getAttribute('data-code');
+    const file = fromToken(favButton.getAttribute('data-file'));
+    toggleFav(code, file);
+    return;
+  }
+});
+
+document.getElementById('search-input').addEventListener('input', event => runSearch(event.target.value));
+document.getElementById('search-close').addEventListener('click', closeSearch);
+document.getElementById('search-overlay').addEventListener('click', event => {
+  if (event.target.id === 'search-overlay') closeSearch();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeSearch();
+});
+
 renderHome();
 renderSubjects();
 renderFavorites();
+renderProfile();
 go('home');
 </script>
 </body>
